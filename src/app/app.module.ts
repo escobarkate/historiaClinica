@@ -26,6 +26,8 @@ import { RevisionSistemasPage } from '../pages/historia_clinica/revision-sistema
 import { SignosVitalesPage } from '../pages/historia_clinica/signos-vitales/signos-vitales';
 import { SolValoracionPage } from '../pages/historia_clinica/sol-valoracion/sol-valoracion';
 import { ViolenciaIntraPage } from '../pages/historia_clinica/violencia-intra/violencia-intra';
+import { BuscarPacientePage } from '../pages/historia_clinica/buscar-paciente/buscar-paciente';
+
 
 
 @NgModule({
@@ -35,7 +37,8 @@ import { ViolenciaIntraPage } from '../pages/historia_clinica/violencia-intra/vi
     ListPage,
     MensajePage,
     HistoriaPage,
-     AntFamiliaresPage,
+    BuscarPacientePage,
+    AntFamiliaresPage,
     AntFarmacologicosPage,
     AntGinecoPage,
     AntPersonalesPage,
@@ -51,7 +54,8 @@ import { ViolenciaIntraPage } from '../pages/historia_clinica/violencia-intra/vi
     RevisionSistemasPage,
     SignosVitalesPage,
     SolValoracionPage,
-    ViolenciaIntraPage
+    ViolenciaIntraPage,
+    
   ],
   imports: [
     BrowserModule,
@@ -80,7 +84,8 @@ import { ViolenciaIntraPage } from '../pages/historia_clinica/violencia-intra/vi
     RevisionSistemasPage,
     SignosVitalesPage,
     SolValoracionPage,
-    ViolenciaIntraPage
+    ViolenciaIntraPage,
+    BuscarPacientePage
   ],
   providers: [
     StatusBar,

@@ -24,6 +24,7 @@ import { RevisionSistemasPage } from '../pages/historia_clinica/revision-sistema
 import { SignosVitalesPage } from '../pages/historia_clinica/signos-vitales/signos-vitales';
 import { SolValoracionPage } from '../pages/historia_clinica/sol-valoracion/sol-valoracion';
 import { ViolenciaIntraPage } from '../pages/historia_clinica/violencia-intra/violencia-intra';
+import { BuscarPacientePage } from '../pages/historia_clinica/buscar-paciente/buscar-paciente';
 
 
 
@@ -48,11 +49,12 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
       { title: 'Mensaje', component: MensajePage },
-      { title: 'Historia', component: HistoriaPage }
+      { title: 'Historia', component: HistoriaPage },
+      { title: 'Buscar Paciente', component: BuscarPacientePage }
     ];
 
     this.pagesHC = [
-      { title: 'Home', component: HomePage },
+      { title: 'Datos principales', component: HomePage },
       { title: 'Reporte examenes', component: ReporteExamenesPage },
       { title: 'Antecedentes familiares', component: AntFamiliaresPage },
       { title: 'Antecedentes personales', component: AntPersonalesPage },
@@ -70,6 +72,7 @@ export class MyApp {
       { title: 'Solicitud de valoracion por especialista', component: SolValoracionPage },
       { title: 'Identificación de riesgos', component: IdRiesgosPage },
       { title: 'Observaciones/Hallazgos', component: ObservacionesPage },
+      { title: 'Buscar Paciente', component: BuscarPacientePage },
       
     ];
 
