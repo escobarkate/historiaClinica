@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="primary" >
+   <button ion-button menuToggle="left">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Enviar mensaje</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="add()">
+        <ion-icon name="attach"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="send()">
+        <ion-icon name="send"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="fondo">  
+  <ion-list>  
+    <ion-item>
+      <ion-label floating full outline>De</ion-label>
+      <ion-input  required  type="email" [(ngModel)]="msj.origen" ></ion-input>
+    </ion-item>
+     <ion-item class="item" full outline>
+        <ion-label floating>Para </ion-label>
+      <ion-input required type="email" [(ngModel)]="msj.destino"></ion-input>
+        <button ion-button icon-only item-right clear > 
+            <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+      </ion-item>
+    <ion-item>
+      <ion-label floating>Asunto </ion-label>
+      <ion-input required type="text" [(ngModel)]="msj.asunto"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating> Escribe tu mensaje</ion-label>
+      <ion-input required type="text" [(ngModel)]="msj.contenido"></ion-input>
+    </ion-item>
+  </ion-list>
+  
+  <ion-fab bottom right>
+    <button ion-fab icon-only color="primary" (click)="send()">
+      <ion-icon name="send"></ion-icon>
+    </button>
+  </ion-fab>
+
+  
+  
+</ion-content>
+
