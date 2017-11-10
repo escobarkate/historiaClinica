@@ -8,7 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { MensajePage } from '../pages/mensaje/mensaje';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { HistoriaPage } from '../pages/historia_clinica/historia';
+import { HistoriaPage } from '../pages/historia_clinica/datos-principales/historia';
 import { AntFamiliaresPage } from '../pages/historia_clinica/ant-familiares/ant-familiares';
 import { AntFarmacologicosPage } from '../pages/historia_clinica/ant-farmacologicos/ant-farmacologicos';
 import { AntGinecoPage } from '../pages/historia_clinica/ant-gineco/ant-gineco';

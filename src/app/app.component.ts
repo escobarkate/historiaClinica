@@ -6,7 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { MensajePage } from '../pages/mensaje/mensaje';
-import { HistoriaPage } from '../pages/historia_clinica/historia';
+import { HistoriaPage } from '../pages/historia_clinica/datos-principales/historia';
 import { AntFamiliaresPage } from '../pages/historia_clinica/ant-familiares/ant-familiares';
 import { AntFarmacologicosPage } from '../pages/historia_clinica/ant-farmacologicos/ant-farmacologicos';
 import { AntGinecoPage } from '../pages/historia_clinica/ant-gineco/ant-gineco';
@@ -54,7 +54,7 @@ export class MyApp {
     ];
 
     this.pagesHC = [
-      { title: 'Datos principales', component: HomePage },
+      { title: 'Datos principales', component: HistoriaPage },
       { title: 'Reporte examenes', component: ReporteExamenesPage },
       { title: 'Antecedentes familiares', component: AntFamiliaresPage },
       { title: 'Antecedentes personales', component: AntPersonalesPage },
