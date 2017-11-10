@@ -14,6 +14,16 @@ import { AntPersonalesPage } from '../pages/historia_clinica/ant-personales/ant-
 import { DiagnosticoPage } from '../pages/historia_clinica/diagnostico/diagnostico';
 import { ExamFisicoPage } from '../pages/historia_clinica/exam-fisico/exam-fisico';
 import { FactProtectoresPage } from '../pages/historia_clinica/fact-protectores/fact-protectores';
+import { IdRiesgosPage } from '../pages/historia_clinica/identificacion-riesgos/identificacion-riesgos';
+import { MoriskyPage } from '../pages/historia_clinica/morisky/morisky';
+import { NoFarmaPage } from '../pages/historia_clinica/no-farma/no-farma';
+import { ObservacionesPage } from '../pages/historia_clinica/observaciones/observaciones';
+import { ParaclinicosPage } from '../pages/historia_clinica/paraclinicos/paraclinicos';
+import { ReporteExamenesPage } from '../pages/historia_clinica/reporte-examenes/reporte-examenes';
+import { RevisionSistemasPage } from '../pages/historia_clinica/revision-sistemas/revision-sistemas';
+import { SignosVitalesPage } from '../pages/historia_clinica/signos-vitales/signos-vitales';
+import { SolValoracionPage } from '../pages/historia_clinica/sol-valoracion/sol-valoracion';
+import { ViolenciaIntraPage } from '../pages/historia_clinica/violencia-intra/violencia-intra';
 
 
 
@@ -43,6 +53,23 @@ export class MyApp {
 
     this.pagesHC = [
       { title: 'Home', component: HomePage },
+      { title: 'Reporte examenes', component: ReporteExamenesPage },
+      { title: 'Antecedentes familiares', component: AntFamiliaresPage },
+      { title: 'Antecedentes personales', component: AntPersonalesPage },
+      { title: 'Antecedentes farmacologicos', component: AntFarmacologicosPage },
+      { title: 'Test de Morisky-Green-Levine', component: MoriskyPage },
+      { title: 'Antecedentes gineco-obstetricos', component: AntGinecoPage },
+      { title: 'Violencia intrafamiliar', component: ViolenciaIntraPage },
+      { title: 'Revision por sistemas', component: RevisionSistemasPage },
+      { title: 'Signos vitales/Medidas ant.', component: SignosVitalesPage },    
+      { title: 'Examen fisico', component: ExamFisicoPage },
+      { title: 'Diagnostico', component: DiagnosticoPage } ,
+      { title: 'Paraclinicos(Solicitados)', component: ParaclinicosPage },
+      { title: 'Tratamiento no farmacologico', component: NoFarmaPage },
+      { title: 'Promocion de factores protectores ', component: FactProtectoresPage },
+      { title: 'Solicitud de valoracion por especialista', component: SolValoracionPage },
+      { title: 'Identificación de riesgos', component: IdRiesgosPage },
+      { title: 'Observaciones/Hallazgos', component: ObservacionesPage },
       
     ];
 

@@ -9,6 +9,24 @@ import { MensajePage } from '../pages/mensaje/mensaje';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HistoriaPage } from '../pages/historia_clinica/historia';
+import { AntFamiliaresPage } from '../pages/historia_clinica/ant-familiares/ant-familiares';
+import { AntFarmacologicosPage } from '../pages/historia_clinica/ant-farmacologicos/ant-farmacologicos';
+import { AntGinecoPage } from '../pages/historia_clinica/ant-gineco/ant-gineco';
+import { AntPersonalesPage } from '../pages/historia_clinica/ant-personales/ant-personales';
+import { DiagnosticoPage } from '../pages/historia_clinica/diagnostico/diagnostico';
+import { ExamFisicoPage } from '../pages/historia_clinica/exam-fisico/exam-fisico';
+import { FactProtectoresPage } from '../pages/historia_clinica/fact-protectores/fact-protectores';
+import { IdRiesgosPage } from '../pages/historia_clinica/identificacion-riesgos/identificacion-riesgos';
+import { MoriskyPage } from '../pages/historia_clinica/morisky/morisky';
+import { NoFarmaPage } from '../pages/historia_clinica/no-farma/no-farma';
+import { ObservacionesPage } from '../pages/historia_clinica/observaciones/observaciones';
+import { ParaclinicosPage } from '../pages/historia_clinica/paraclinicos/paraclinicos';
+import { ReporteExamenesPage } from '../pages/historia_clinica/reporte-examenes/reporte-examenes';
+import { RevisionSistemasPage } from '../pages/historia_clinica/revision-sistemas/revision-sistemas';
+import { SignosVitalesPage } from '../pages/historia_clinica/signos-vitales/signos-vitales';
+import { SolValoracionPage } from '../pages/historia_clinica/sol-valoracion/sol-valoracion';
+import { ViolenciaIntraPage } from '../pages/historia_clinica/violencia-intra/violencia-intra';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +34,24 @@ import { HistoriaPage } from '../pages/historia_clinica/historia';
     HomePage,
     ListPage,
     MensajePage,
-    HistoriaPage
+    HistoriaPage,
+     AntFamiliaresPage,
+    AntFarmacologicosPage,
+    AntGinecoPage,
+    AntPersonalesPage,
+    DiagnosticoPage ,
+    ExamFisicoPage,
+    FactProtectoresPage,
+    IdRiesgosPage,
+    MoriskyPage,
+    NoFarmaPage,
+    ObservacionesPage,
+    ParaclinicosPage,
+    ReporteExamenesPage,
+    RevisionSistemasPage,
+    SignosVitalesPage,
+    SolValoracionPage,
+    ViolenciaIntraPage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +63,24 @@ import { HistoriaPage } from '../pages/historia_clinica/historia';
     HomePage,
     ListPage,
     MensajePage,
-    HistoriaPage
+    HistoriaPage,
+    AntFamiliaresPage,
+    AntFarmacologicosPage,
+    AntGinecoPage,
+    AntPersonalesPage,
+    DiagnosticoPage ,
+    ExamFisicoPage,
+    FactProtectoresPage,
+    IdRiesgosPage,
+    MoriskyPage,
+    NoFarmaPage,
+    ObservacionesPage,
+    ParaclinicosPage,
+    ReporteExamenesPage,
+    RevisionSistemasPage,
+    SignosVitalesPage,
+    SolValoracionPage,
+    ViolenciaIntraPage
   ],
   providers: [
     StatusBar,
