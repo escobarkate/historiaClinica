@@ -54,7 +54,7 @@ export class MyApp {
     ];
 
     this.pagesHC = [
-      { title: 'Datos principales', component: HistoriaPage },
+      { title: 'Datos principales', component: HistoriaPage  },
       { title: 'Reporte examenes', component: ReporteExamenesPage },
       { title: 'Antecedentes familiares', component: AntFamiliaresPage },
       { title: 'Antecedentes personales', component: AntPersonalesPage },

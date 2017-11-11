@@ -5,11 +5,12 @@ import { MenuController } from 'ionic-angular';
 
 @Component({
   selector: 'page-historia',
-  templateUrl: 'historia.html'
+  templateUrl: 'historia.html',
+  
 })
 export class HistoriaPage {
   
-
+ 
 constructor(public navCtrl: NavController, public menuCtrl: MenuController) {
     
   }

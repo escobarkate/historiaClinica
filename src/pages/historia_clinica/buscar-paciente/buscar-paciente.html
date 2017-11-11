@@ -3,14 +3,28 @@
     <button ion-button menuToggle="left" start>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title >
+   <ion-title >
       Buscar Paciente
-    </ion-title>  
+    </ion-title>   
+  
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  
+  <button ion-button (click)="goToSlide()">boton1</button>
+  <button ion-button>2</button>
+  <button ion-button>3</button>
+  <ion-slides >
+    <ion-slide>
+      <h1>Slide 1</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 2</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 3</h1>
+    </ion-slide>
+  </ion-slides>
 
 </ion-content>
 

@@ -4,7 +4,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      Informacion principal
+     Riesgo cardiovascular (RCV)
     </ion-title>
 
   </ion-navbar>
@@ -17,27 +17,30 @@
           <img src="https://cdn1.pri.org/sites/default/files/person-image/980830_10205947467221382_1198269611400880613_o.jpg">
         </ion-thumbnail>
 
-        
+
 
         <h3 color="dark">Información basica</h3>
         <p><b>C.C</b> 1'061,779.427</p>
         <p><b>Edad:</b> 20 años </p>
         <p><b>Genero:</b> F </p>
         <p><b>Adm:</b> Subsidiada </p>
-          
-      
+
+
       </ion-item>
     </ion-list>
-    <ion-fab mini bottom right >
-    <button ion-fab icon-only color="primary" menuToggle="right" >
+    <ion-fab mini bottom right>
+      <button ion-fab icon-only color="primary" menuToggle="right">
       <ion-icon name="add-circle"></ion-icon>
     </button>
-  </ion-fab>
+    </ion-fab>
   </ion-toolbar>
 
 </ion-header>
 
 <ion-content>
+  <ion-toolbar>
+    <ion-title>Datos principales</ion-title>
+  </ion-toolbar>
   <ion-list>
     <ion-list-header>Información del acudiente</ion-list-header>
 
@@ -46,34 +49,49 @@
       <ion-input placeholder=""></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label color="primary">Parentezco</ion-label>
+      <ion-label color="primary">Parentesco</ion-label>
       <ion-input placeholder=""></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label color="primary">Telefono</ion-label>
-      <ion-input placeholder=""></ion-input>
+      <ion-label color="primary" fixed>Telefono</ion-label>
+      <ion-input type="tel" placeholder=""></ion-input>
     </ion-item>
   </ion-list>
 
   <ion-list>
     <ion-list-header>Motivo de consulta</ion-list-header>
-    <ion-item class="item">
-      <h2>Tipo de consulta</h2>
-      <button ion-button icon-only item-right clear> 
-            <ion-icon name="arrow-forward"></ion-icon>
-        </button>
-    </ion-item>
     <ion-item>
-      <ion-textarea color="primary">Motivo de consulta</ion-textarea>
-      <ion-input type="text" placeholder="Motivo consulta"></ion-input>
+      <ion-label>Tipo consulta</ion-label>
+      <!-- <ion-select [(ngModel)]="motivoConsulta"> -->
+      <ion-select>
+        <ion-option value="f">Primera vez por medico</ion-option>
+        <ion-option value="m">Control por medico</ion-option>
+        <ion-option value="m">Control por enfermera</ion-option>
+        <ion-option value="m">Inasistencia</ion-option>
+      </ion-select>
     </ion-item>
-    <ion-item>
-      <ion-label color="primary">Enfermedad actual</ion-label>
-      <ion-input placeholder=""></ion-input>
-    </ion-item>
+     <ion-grid>
+    <ion-row>
+      <ion-col width-20>
+        <ion-label color="primary">Motivo de consulta:</ion-label>
+      </ion-col>
+      <ion-col width-80>
+        <textarea rows="4" cols="17"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-20>
+        <ion-label color="primary" >Enfermedad actual:</ion-label>
+      </ion-col>
+      <ion-col width-80>
+        <textarea rows="4" cols="17"> </textarea>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   </ion-list>
+ 
+
 
 
 
 </ion-content>
-

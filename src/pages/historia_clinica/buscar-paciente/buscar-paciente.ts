@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component,ViewChild } from '@angular/core';
+import { Slides, NavController, NavParams ,ToastController } from 'ionic-angular';
+
+
+
 
 
 @Component({
@@ -7,19 +10,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'buscar-paciente.html',
 })
 export class BuscarPacientePage {
-    list: string[] = ["Maria","Pablo"];
-    items = [
-            {title: 'one'},
-            {title: 'two'},
-            {title: 'three'},
-            {title: 'four'},
-            {title: 'five'},
-            {title: 'six'}
-        ]
+    @ViewChild(Slides) slides: Slides;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,  private toast: ToastController) {
   }
-
+  goToSlide( ) {
+    this.slides.slideTo(1, 500);
+  }
+   slideChanged() {
+     let msg;
+    let currentIndex = this.slides.getActiveIndex();
+    console.log('Current index is', currentIndex);
+     msg = this.toast.create({ message: "Pantalla" +currentIndex, duration: 3000 });
+  }
+  
   
 
 }
