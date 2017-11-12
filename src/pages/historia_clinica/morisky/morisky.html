@@ -3,23 +3,48 @@
     <button ion-button menuToggle="left" start>
       <ion-icon name="menu"></ion-icon>
     </button>
-    
-
+    <ion-title>
+      Riesgo cardiovascular (RCV)
+    </ion-title>
   </ion-navbar>
 
-  
+  <ion-toolbar class="toolbar">
+    <ion-title>Test de Morisky</ion-title>
+  </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
-  
-</ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Test de Moriski-Green-Levine</ion-title>
-    <button ion-button color="calm" menuToggle="right" end>
-      <ion-icon name="arrow-dropup-circle"></ion-icon>
+  <ion-fab mini bottom right>
+    <button ion-fab icon-only color="primary" menuToggle="right">
+      <ion-icon name="add-circle"></ion-icon>
     </button>
-  </ion-toolbar>
+  </ion-fab>
 
-</ion-footer>
+  <ion-list>
+
+  <ion-item>
+    <ion-label>Se olvida alguna vez de tomar<br> los medicamentos</ion-label>
+    <ion-toggle [(ngModel)]="morisky1"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Es descuidado con la hora de<br>tomar medicamentos?</ion-label>
+    <ion-toggle [(ngModel)]="morisky2" disabled="false"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Cuándo se siente bien los deja <br> de tomar?</ion-label>
+    <ion-toggle [(ngModel)]="morisky3"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Si alguna vez le caen mal los<br>deja de tomar?</ion-label>
+    <ion-toggle [(ngModel)]="morisky4"></ion-toggle>
+  </ion-item>
+
+</ion-list>
+
+
+
+</ion-content>

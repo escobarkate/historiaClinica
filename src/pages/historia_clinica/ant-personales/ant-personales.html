@@ -3,23 +3,282 @@
     <button ion-button menuToggle="left" start>
       <ion-icon name="menu"></ion-icon>
     </button>
-    
-
   </ion-navbar>
 
-  
+  <ion-toolbar class="toolbar">
+    <ion-title>Antecedentes Personales</ion-title>
+  </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
-  
-</ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Antecedentes Personales</ion-title>
-    <button ion-button color="calm" menuToggle="right" end>
-      <ion-icon name="arrow-dropup-circle"></ion-icon>
+  <ion-fab mini bottom right>
+    <button ion-fab icon-only color="primary" menuToggle="right">
+      <ion-icon name="add-circle"></ion-icon>
     </button>
-  </ion-toolbar>
+  </ion-fab>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">HTA:</ion-label>
+        <ion-toggle [(ngModel)]="HTA"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">TABAQUISMO:</ion-label>
+        <ion-toggle [(ngModel)]="TABAQUISMO"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">ACV:</ion-label>
+        <ion-toggle [(ngModel)]="ACV"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">HVI:</ion-label>
+        <ion-toggle [(ngModel)]="HVI"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">EPOC:</ion-label>
+        <ion-toggle [(ngModel)]="HTA"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">ENF. ENDOCRINA</ion-label>
+        <ion-toggle [(ngModel)]="ENFENDOCRINA"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+    <ion-col>
+      <ion-label color="primary">DIABETES:</ion-label>
+      <ion-toggle [(ngModel)]="DIABETES"></ion-toggle>
+    </ion-col>
+    <ion-col>
+      <textarea rows="4" cols="19"> </textarea>
+    </ion-col>
+    </ion-row> -->
 
-</ion-footer>
+     <ion-row>
+      <ion-col>
+        <ion-label color="primary">ENF RENAL:</ion-label>
+        <ion-toggle [(ngModel)]="ENFRENAL"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">OBESIDAD:</ion-label>
+        <ion-toggle [(ngModel)]="OBESIDAD"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row> 
+     <ion-row>
+      <ion-col>
+        <ion-label color="primary">ENF. CORONARIA:</ion-label>
+        <ion-toggle [(ngModel)]="ENFCORONARIA"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">CA. MAMA:</ion-label>
+        <ion-toggle [(ngModel)]="CAMAMA"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">DISLIPIDEMIA</ion-label>
+        <ion-toggle [(ngModel)]="DISLIPIDEMIA"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row> 
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">ASMA:</ion-label>
+        <ion-toggle [(ngModel)]="ASMA"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">CA. GASTRICO</ion-label>
+        <ion-toggle [(ngModel)]="CAGASTRICO"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">ENF. VASCULAR:</ion-label>
+        <ion-toggle [(ngModel)]="ENFVASCULAR"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row> 
+     <ion-row>
+      <ion-col>
+        <ion-label color="primary">QUIRURGICOS</ion-label>
+        <ion-toggle [(ngModel)]="QUIRURGICOS"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">EPIMIOLOGICOS:</ion-label>
+        <ion-toggle [(ngModel)]="EPIMIOLOGICOS"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">TRAUMAS</ion-label>
+        <ion-toggle [(ngModel)]="TRAUMAS"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">CA. CERVIX:</ion-label>
+        <ion-toggle [(ngModel)]="CACVIXER"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row> 
+     <ion-row>
+     <ion-col>
+        <ion-label color="primary">ALERGICOS:</ion-label>
+        <ion-toggle [(ngModel)]="ALERGICOS"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">FIEBRE REUMATICA:</ion-label>
+        <ion-toggle [(ngModel)]="FIEBREREUMATICA"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">ETS:</ion-label>
+        <ion-toggle [(ngModel)]="ETS"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">LEISHMANIASIS:</ion-label>
+        <ion-toggle [(ngModel)]="LEISHMANIASIS"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">LEPRA:</ion-label>
+        <ion-toggle [(ngModel)]="LEPRA"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">MALARIA:</ion-label>
+        <ion-toggle [(ngModel)]="MALARIA"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">DENGUE:</ion-label>
+        <ion-toggle [(ngModel)]="DENGUE"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">FIEBRE AMARILLA</ion-label>
+        <ion-toggle [(ngModel)]="FIEBREA"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">TUBERCOLOSIS</ion-label>
+        <ion-toggle [(ngModel)]="TUBERCULOSIS"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">GENITOURINARIO</ion-label>
+        <ion-toggle [(ngModel)]="HTA"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> GENITO</textarea>
+      </ion-col>
+    </ion-row> 
+  </ion-grid>
+</ion-content>

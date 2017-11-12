@@ -3,23 +3,47 @@
     <button ion-button menuToggle="left" start>
       <ion-icon name="menu"></ion-icon>
     </button>
-    
-
   </ion-navbar>
 
-  
+  <ion-toolbar class="toolbar">
+    <ion-title>Violencia intrafamiliar</ion-title>
+  </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
-  
-</ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Violenvia intrafamiliar</ion-title>
-    <button ion-button color="calm" menuToggle="right" end>
-      <ion-icon name="arrow-dropup-circle"></ion-icon>
+  <ion-fab mini bottom right>
+    <button ion-fab icon-only color="primary" menuToggle="right">
+      <ion-icon name="add-circle"></ion-icon>
     </button>
-  </ion-toolbar>
+  </ion-fab>
 
-</ion-footer>
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Se siente bien con su familia?</ion-label>
+      <ion-toggle [(ngModel)]="intraf1"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Cuándo tiene problemas es <br>apoyado por su familia?</ion-label>
+      <ion-toggle [(ngModel)]="intraf2" disabled="false"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Existen expresiones de afecto <br>y cariño</ion-label>
+      <ion-toggle [(ngModel)]="intraf2" disabled="false"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Se siente rechazado por alguien<br>de su familia?</ion-label>
+      <ion-toggle [(ngModel)]="intraf2" disabled="false"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ha sido agredido fisicamente por <br>algun familiar?</ion-label>
+      <ion-toggle [(ngModel)]="intraf2" disabled="false"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ha tenido ideas o pensamientos<br>suicidas?</ion-label>
+      <ion-toggle [(ngModel)]="intraf2" disabled="false"></ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>

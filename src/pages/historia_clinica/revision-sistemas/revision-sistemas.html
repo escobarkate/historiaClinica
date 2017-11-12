@@ -3,23 +3,117 @@
     <button ion-button menuToggle="left" start>
       <ion-icon name="menu"></ion-icon>
     </button>
-    
-
+    <ion-title>
+      Riesgo cardiovascular (RCV)
+    </ion-title>
   </ion-navbar>
 
-  
+  <ion-toolbar class="toolbar">
+    <ion-title>Antecedentes familiares</ion-title>
+  </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
+  <ion-fab mini bottom right>
+      <button ion-fab icon-only color="primary" menuToggle="right">
+      <ion-icon name="add-circle"></ion-icon>
+    </button>
+    </ion-fab>
+  <ion-grid >       
+    <!-- <ion-row *ngFor="let c of items" >
+      <ion-col >               
+        <ion-label  color="primary">{{c.title}}:</ion-label>   
+        <ion-toggle  [(ngModel)]={{c.model}}></ion-toggle>
+      </ion-col>
+      <ion-col  >       
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row> -->
+    <ion-row  >
+      <ion-col width-40 >               
+        <ion-label  color="primary" class="btn">ORL</ion-label>   
+        <ion-toggle  [(ngModel)]="revision1" class="btn1"></ion-toggle>
+      </ion-col>
+      <ion-col width-60 >       
+        <textarea rows="4" cols="17"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row class="alineacion" >
+      <ion-col >               
+        <ion-label  color="primary" class="btn">SISTEMA <br>RESPIRATORIO</ion-label>   
+        <ion-toggle  [(ngModel)]="revision2" class="btn1"></ion-toggle>
+      </ion-col>
+      <ion-col  >       
+        <textarea rows="4" cols="17"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row class="alineacion" >
+      <ion-col >               
+        <ion-label  color="primary" class="btn">SISTEMA <br>CARDIOVASCULAR</ion-label>   
+        <ion-toggle  [(ngModel)]="revision3" class="btn1"></ion-toggle>
+      </ion-col>
+      <ion-col  >       
+        <textarea rows="4" cols="17"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row  >
+      <ion-col >               
+        <ion-label  color="primary" class="btn">SISTEMA <br>GASTROINTESTINAL</ion-label>   
+        <ion-toggle  [(ngModel)]="revision5" class="btn1"></ion-toggle>
+      </ion-col>
+      <ion-col  >       
+        <textarea rows="4" cols="16"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row  >
+      <ion-col >               
+        <ion-label  color="primary" class="btn">SISTEMA <br>GENITOURINARIO</ion-label>   
+        <ion-toggle  [(ngModel)]="revision6" class="btn1"></ion-toggle>
+      </ion-col>
+      <ion-col  >       
+        <textarea rows="4" cols="17"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row  >
+      <ion-col >               
+        <ion-label  color="primary" class="btn">SISTEMA <br>OSTEOMUSCULAR</ion-label>   
+        <ion-toggle  [(ngModel)]="revision7" class="btn1"></ion-toggle>
+      </ion-col>
+      <ion-col  >       
+        <textarea rows="4" cols="17"> </textarea>
+      </ion-col>
+    </ion-row>
+  <ion-row  >
+      <ion-col >               
+        <ion-label  color="primary" class="btn">SISTEMA NERVIOSO<br>CENTRAL</ion-label>   
+        <ion-toggle  [(ngModel)]="revision9"class="btn1"></ion-toggle>
+      </ion-col>
+      <ion-col >       
+        <textarea rows="4" cols="16"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row  >
+      <ion-col >               
+        <ion-label  color="primary" class="btn">SISTEMA <br>ENDOCRINO</ion-label>   
+        <ion-toggle  [(ngModel)]="revision9"class="btn1"></ion-toggle>
+      </ion-col>
+      <ion-col >       
+        <textarea rows="4" cols="16"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row  >
+      <ion-col >               
+        <ion-label  color="primary" class="btn">PIEL Y <br>FANERAS</ion-label>   
+        <ion-toggle  [(ngModel)]="revision10"class="btn1"></ion-toggle>
+      </ion-col>
+      <ion-col  >       
+        <textarea rows="4" cols="17"> </textarea>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+    
   
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Revision por sistemas</ion-title>
-    <button ion-button color="calm" menuToggle="right" end>
-      <ion-icon name="arrow-dropup-circle"></ion-icon>
-    </button>
-  </ion-toolbar>
-
-</ion-footer>
