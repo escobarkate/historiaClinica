@@ -6,19 +6,43 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>buscarPa</ion-title>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle="left" start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Buscar paciente
+    </ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
+  <ion-segment [(ngModel)]="buscar" color="primary">
+    <ion-segment-button value="cedula">
+      Por cedula
+    </ion-segment-button>
+    <ion-segment-button value="nombre">
+      Por nombre
+    </ion-segment-button>
+  </ion-segment>
 
-  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-<ion-list>
-  <ion-item *ngFor="let item of items">
-    <h3>{{item}}</h3>
-  </ion-item>
-</ion-list>
+  <div [ngSwitch]="buscar">
+    <div *ngSwitchCase="'nombre'">
+      <ion-searchbar (ionInput)="getItemsN($event)"></ion-searchbar>
+      <ion-list>
+        <ion-item *ngFor="let item of nombres">
+          <h3> {{item}}</h3>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div *ngSwitchCase="'cedula'">
+      <ion-searchbar (ionInput)="getItemsC($event)"></ion-searchbar>
+      <ion-list>
+        <ion-item *ngFor="let item of cedulas">
+          <h3> {{item}}</h3>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
 </ion-content>
