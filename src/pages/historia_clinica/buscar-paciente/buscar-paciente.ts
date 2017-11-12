@@ -1,5 +1,6 @@
 import { Component,ViewChild } from '@angular/core';
-import { Slides, NavController, NavParams ,ToastController } from 'ionic-angular';
+import { Slides, NavController, NavParams ,ToastController,PopoverController } from 'ionic-angular';
+import { ObservacionesPage } from '..//observaciones/observaciones';
 
 
 
@@ -12,7 +13,13 @@ import { Slides, NavController, NavParams ,ToastController } from 'ionic-angular
 export class BuscarPacientePage {
     @ViewChild(Slides) slides: Slides;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,  private toast: ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,  private toast: ToastController,public popoverCtrl: PopoverController) {
+  }
+   presentPopover(myEvent) {
+    let popover = this.popoverCtrl.create(ObservacionesPage);
+    popover.present({
+      ev: myEvent
+    });
   }
   goToSlide( ) {
     this.slides.slideTo(1, 500);

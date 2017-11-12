@@ -25,6 +25,7 @@ import { SignosVitalesPage } from '../pages/historia_clinica/signos-vitales/sign
 import { SolValoracionPage } from '../pages/historia_clinica/sol-valoracion/sol-valoracion';
 import { ViolenciaIntraPage } from '../pages/historia_clinica/violencia-intra/violencia-intra';
 import { BuscarPacientePage } from '../pages/historia_clinica/buscar-paciente/buscar-paciente';
+import { BuscarPaPage } from '../pages/historia_clinica/buscar-pa/buscar-pa';
 
 
 
@@ -50,7 +51,8 @@ export class MyApp {
       { title: 'List', component: ListPage },
       { title: 'Mensaje', component: MensajePage },
       { title: 'Historia', component: HistoriaPage },
-      { title: 'Buscar Paciente', component: BuscarPacientePage }
+      { title: 'Buscar Paciente', component: BuscarPacientePage },
+      { title: 'Buscar Paciente 2', component: BuscarPaPage }
     ];
 
     this.pagesHC = [

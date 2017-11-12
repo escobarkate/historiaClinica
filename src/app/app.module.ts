@@ -27,6 +27,7 @@ import { SignosVitalesPage } from '../pages/historia_clinica/signos-vitales/sign
 import { SolValoracionPage } from '../pages/historia_clinica/sol-valoracion/sol-valoracion';
 import { ViolenciaIntraPage } from '../pages/historia_clinica/violencia-intra/violencia-intra';
 import { BuscarPacientePage } from '../pages/historia_clinica/buscar-paciente/buscar-paciente';
+import { BuscarPaPage } from '../pages/historia_clinica/buscar-pa/buscar-pa';
 
 
 
@@ -55,6 +56,7 @@ import { BuscarPacientePage } from '../pages/historia_clinica/buscar-paciente/bu
     SignosVitalesPage,
     SolValoracionPage,
     ViolenciaIntraPage,
+    BuscarPaPage,
     
   ],
   imports: [
@@ -85,7 +87,8 @@ import { BuscarPacientePage } from '../pages/historia_clinica/buscar-paciente/bu
     SignosVitalesPage,
     SolValoracionPage,
     ViolenciaIntraPage,
-    BuscarPacientePage
+    BuscarPacientePage,
+    BuscarPaPage,
   ],
   providers: [
     StatusBar,
