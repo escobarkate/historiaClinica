@@ -3,23 +3,91 @@
     <button ion-button menuToggle="left" start>
       <ion-icon name="menu"></ion-icon>
     </button>
-    
-
+    <ion-title>
+      Riesgo cardiovascular (RCV)
+    </ion-title>
   </ion-navbar>
 
-  
+  <ion-toolbar class="toolbar">
+    <ion-title>PARACLINICOS(Solicitados)</ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  
-</ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Paraclinicos (Solicitados)</ion-title>
-    <button ion-button color="calm" menuToggle="right" end>
-      <ion-icon name="arrow-dropup-circle"></ion-icon>
+  <ion-fab mini bottom right>
+    <button ion-fab icon-only color="primary" menuToggle="right">
+      <ion-icon name="add-circle"></ion-icon>
     </button>
-  </ion-toolbar>
+  </ion-fab>
+  <ion-list>
 
-</ion-footer>
+    <ion-item>
+      <ion-label>Hemograma</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Hemoglobina gricolisada</ion-label>
+      <ion-toggle [(ngModel)]="sausage" disabled="false"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Triglicéridos</ion-label>
+      <ion-toggle [(ngModel)]="mushrooms"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>LDL</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Creatinina sérica</ion-label>
+      <ion-toggle [(ngModel)]="sausage" disabled="false"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Electrocardiograma</ion-label>
+      <ion-toggle [(ngModel)]="mushrooms"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Depuración de creatinina</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Glicemia basal</ion-label>
+      <ion-toggle [(ngModel)]="sausage" disabled="false"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Colesterol total</ion-label>
+      <ion-toggle [(ngModel)]="mushrooms"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Parcial de orina</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Microalbu liminuria</ion-label>
+      <ion-toggle [(ngModel)]="sausage" disabled="false"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Ecocardioagrama</ion-label>
+      <ion-toggle [(ngModel)]="mushrooms"></ion-toggle>
+    </ion-item>
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">OTROS:</ion-label>
+      </ion-col>
+      <ion-col>
+        <textarea rows="3" cols="24"> </textarea>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

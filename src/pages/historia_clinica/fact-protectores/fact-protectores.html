@@ -3,23 +3,92 @@
     <button ion-button menuToggle="left" start>
       <ion-icon name="menu"></ion-icon>
     </button>
-    
-
+    <ion-title>
+      Riesgo cardiovascular (RCV)
+    </ion-title>
   </ion-navbar>
 
-  
+  <ion-toolbar class="toolbar">
+    <ion-title>SOLICITUD DE VALORACION<br> POR ESPECIALISTAS</ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  
-</ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Promocion de factores protectores</ion-title>
-    <button ion-button color="calm" menuToggle="right" end>
-      <ion-icon name="arrow-dropup-circle"></ion-icon>
+  <ion-fab mini bottom right>
+    <button ion-fab icon-only color="primary" menuToggle="right">
+      <ion-icon name="add-circle"></ion-icon>
     </button>
-  </ion-toolbar>
+  </ion-fab>
+  <ion-list>
+    <ion-item>
+      <ion-label>5 frutas y verduras al día</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Reducción de ingesta calórica</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>No consumo de alcohol</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dieta baja en grasa </ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
 
-</ion-footer>
+     <ion-item>
+      <ion-label>Actividad fisica (Norma OMS) </ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>No consumo de tabaco</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Manejo de estres y ansiedad</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dieta baja en sal </ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dieta naja en azucares </ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label> Control periodico de peso</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Comunicacion intrafamiliar</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Auto examen de seno </ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Higiene oral </ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Auto cuidado y aseo </ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Auto examen de testiculo</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label> Cumplir citas programadas</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Realización de citologias </ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item> 
+  </ion-list>
+
+</ion-content>

@@ -3,23 +3,29 @@
     <button ion-button menuToggle="left" start>
       <ion-icon name="menu"></ion-icon>
     </button>
-    
-
+    <ion-title>
+      Riesgo cardiovascular (RCV)
+    </ion-title>
   </ion-navbar>
 
-  
+  <ion-toolbar class="toolbar">
+    <ion-title>Observaciones/hallazgos</ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  
-</ion-content>
+<ion-content padding>
 
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Observaciones/Hallazgos/Remision</ion-title>
-    <button ion-button color="calm" menuToggle="right" end>
-      <ion-icon name="arrow-dropup-circle"></ion-icon>
+  <ion-fab mini bottom right>
+    <button ion-fab icon-only color="primary" menuToggle="right">
+      <ion-icon name="add-circle"></ion-icon>
     </button>
-  </ion-toolbar>
+  </ion-fab>
 
-</ion-footer>
+  <ion-label color="primary">OBSERVACIONES/HALLAZGOS</ion-label>
+  <textarea rows="4" cols="35"> </textarea>
+  <ion-label color="primary">REMISION</ion-label>
+  <textarea rows="4" cols="35"> </textarea>
+  <ion-label color="primary">ANÁLISIS Y PLAN</ion-label>
+  <textarea rows="4" cols="35"> </textarea>
+
+</ion-content>

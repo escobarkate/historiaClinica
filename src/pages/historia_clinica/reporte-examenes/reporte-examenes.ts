@@ -7,8 +7,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'reporte-examenes.html',
 })
 export class ReporteExamenesPage {
+ icons: string[];
+ items: Array<{numero: string, tipo: string, fecha: string, resultado:string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+   
+    this.items = [{numero: '1 ' , tipo: 'Hemoglobina',fecha:'21/06/2017', resultado:'bien'},{numero: '2 ' , tipo: 'Hemo',fecha:'21/06/2017', resultado:'bien'}];
+    
   }
 
   ionViewDidLoad() {

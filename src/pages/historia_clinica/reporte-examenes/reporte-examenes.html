@@ -3,23 +3,55 @@
     <button ion-button menuToggle="left" start>
       <ion-icon name="menu"></ion-icon>
     </button>
-    
-
+    <ion-title>
+      Riesgo cardiovascular (RCV)
+    </ion-title>
   </ion-navbar>
 
-  
+  <ion-toolbar class="toolbar">
+    <ion-title>Reporte examenes</ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  
-</ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Reporte de examnenes</ion-title>
-    <button ion-button color="calm" menuToggle="right" end>
-      <ion-icon name="arrow-dropup-circle"></ion-icon>
+<ion-content padding>
+  <ion-fab mini bottom right>
+    <button ion-fab icon-only color="primary" menuToggle="right">
+      <ion-icon name="add-circle"></ion-icon>
     </button>
-  </ion-toolbar>
+  </ion-fab>
 
-</ion-footer>
+  <ion-item>
+    <ion-label color="primary">Tipo</ion-label>
+    <ion-select [(ngModel)]="gender">
+      <ion-option value="f">Female</ion-option>
+      <ion-option value="m">Male</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary">FECHA</ion-label>
+    <ion-input type="date" placeholder="Text Input"></ion-input>
+  </ion-item>
+  
+  <ion-label color="primary">DIAGNOSTICO</ion-label>
+  <textarea rows="3" cols="35" > </textarea>
+
+  <button ion-button block>Agregar</button>
+   
+  <ion-list>
+     <ion-list-header class="toolbar">EXAMENES REGISTRADOS</ion-list-header>
+         <ion-item *ngFor="let c of items" >
+      <ion-grid>
+        <ion-row>
+          <ion-col width-50>
+            <p color="dark"> No. examen {{c.numero}}</p>
+            <p> Tipo :{{c.tipo}}</p>
+            <p> Fecha :{{c.fecha}}</p>
+            <p>Resultado: {{c.resultado}}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+  </ion-list>
+   
+</ion-content>

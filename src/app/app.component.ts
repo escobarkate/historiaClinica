@@ -60,7 +60,6 @@ export class MyApp {
       { title: 'Antecedentes personales', component: AntPersonalesPage },
       { title: 'Antecedentes farmacologicos', component: AntFarmacologicosPage },
       { title: 'Test de Morisky-Green-Levine', component: MoriskyPage },
-      { title: 'Antecedentes gineco-obstetricos', component: AntGinecoPage },
       { title: 'Violencia intrafamiliar', component: ViolenciaIntraPage },
       { title: 'Revision por sistemas', component: RevisionSistemasPage },
       { title: 'Signos vitales/Medidas ant.', component: SignosVitalesPage },    
@@ -71,9 +70,7 @@ export class MyApp {
       { title: 'Promocion de factores protectores ', component: FactProtectoresPage },
       { title: 'Solicitud de valoracion por especialista', component: SolValoracionPage },
       { title: 'Identificación de riesgos', component: IdRiesgosPage },
-      { title: 'Observaciones/Hallazgos', component: ObservacionesPage },
-      { title: 'Buscar Paciente', component: BuscarPacientePage },
-      
+      { title: 'Observaciones/Hallazgos', component: ObservacionesPage },      
     ];
 
   }

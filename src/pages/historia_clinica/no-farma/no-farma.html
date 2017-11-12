@@ -3,23 +3,26 @@
     <button ion-button menuToggle="left" start>
       <ion-icon name="menu"></ion-icon>
     </button>
-    
-
+    <ion-title>
+      Riesgo cardiovascular (RCV)
+    </ion-title>
   </ion-navbar>
 
-  
+  <ion-toolbar class="toolbar">
+    <ion-title>Tratamientos no farmacologicos</ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  
-</ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Tratamientos no farmacologicos</ion-title>
-    <button ion-button color="calm" menuToggle="right" end>
-      <ion-icon name="arrow-dropup-circle"></ion-icon>
+<ion-content padding>
+  <ion-fab mini bottom right>
+    <button ion-fab icon-only color="primary" menuToggle="right">
+      <ion-icon name="add-circle"></ion-icon>
     </button>
-  </ion-toolbar>
+  </ion-fab>
 
-</ion-footer>
+  <ion-label color="primary">EXPLICACIÓN DE ASPECTOS GENERALES <br> DE LA ENFERMEDAD</ion-label>
+  <textarea rows="6" cols="35"> </textarea>
+  <ion-label color="primary">IDENTIFICACION DE SIGNOS Y SÍNTOMAS<br> DE ALARMA</ion-label>
+  <textarea rows="6" cols="35"> </textarea>
+
+</ion-content>

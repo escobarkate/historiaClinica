@@ -3,31 +3,74 @@
     <button ion-button menuToggle="left" start>
       <ion-icon name="menu"></ion-icon>
     </button>
-    
-
+    <ion-title>
+      Riesgo cardiovascular (RCV)
+    </ion-title>
   </ion-navbar>
 
-  
+  <ion-toolbar class="toolbar">
+    <ion-title>DIAGNOSTICO</ion-title>
+  </ion-toolbar>
 </ion-header>
-<ion-content>
+
+<ion-content padding>
+  <ion-fab mini bottom right>
+    <button ion-fab icon-only color="primary" menuToggle="right">
+      <ion-icon name="add-circle"></ion-icon>
+    </button>
+  </ion-fab>
   <ion-list>
     <ion-item>
-      <ion-note item-start>
-        Left Note
-      </ion-note>
-      My Item
-      <ion-note item-end>
-        Right Note
-      </ion-note>
+      <ion-label color="primary" floating>DIAGNOSTICO PRINCIPAL</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>DIAGNOSTICO RELACIONADO 2</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>DIAGNOSTICO RELACIONADO 3</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>DIAGNOSTICO RELACIONADO 4</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>DIAGNOSTICO RELACIONADO 5</ion-label>
+      <ion-input></ion-input>
     </ion-item>
   </ion-list>
-</ion-content>
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Diagnostico</ion-title>
-    <button ion-button color="calm" menuToggle="right" end>
-      <ion-icon name="arrow-dropup-circle"></ion-icon>
-    </button>
-  </ion-toolbar>
+  <ion-label color="primary">OBSERVACIONES</ion-label>
+  <textarea rows="3" cols="35"> </textarea>
+  
+  <ion-item>
+    <ion-label color="primary">FINALIDAD<br> DE CONSULTA</ion-label>
+    <ion-select >
+      <ion-option value="1">Primera vez por medico</ion-option>
+      <ion-option value="2">Control por medico</ion-option>
+      <ion-option value="3">Control por enfermera</ion-option>
+      <ion-option value="4">Inasistencia</ion-option>
+    </ion-select>
+  </ion-item>
 
-</ion-footer>
+  <ion-item>
+    <ion-label color="primary">CAUSA EXTERNA</ion-label>
+    <ion-select >
+      <ion-option value="1">Accidente de trabajo</ion-option>
+      <ion-option value="2">Accidente de trafico</ion-option>
+      <ion-option value="3">Accidente rabico</ion-option>
+      <ion-option value="4">Accidente ofidico</ion-option>
+      <ion-option value="5">Otro accidente</ion-option>
+      <ion-option value="6">Evento catastrofico</ion-option>
+    </ion-select>
+  </ion-item>
+
+<ion-item>
+    <ion-label color="primary">TIPO DE<br>DIAGNOSTICO</ion-label>
+    <ion-select >
+      <ion-option value="1">Impresion diagnotica</ion-option>
+      <ion-option value="2">Confirmado nuevo</ion-option>
+      <ion-option value="3">Confirmado repetido</ion-option>
+    </ion-select>
+  </ion-item>

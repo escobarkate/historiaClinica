@@ -3,23 +3,69 @@
     <button ion-button menuToggle="left" start>
       <ion-icon name="menu"></ion-icon>
     </button>
-    
-
+    <ion-title>
+      Riesgo cardiovascular (RCV)
+    </ion-title>
   </ion-navbar>
 
-  
+  <ion-toolbar class="toolbar">
+    <ion-title>SOLICITUD DE VALORACION<br> POR ESPECIALISTAS</ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  
-</ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Solicitud de valoracion por especialista</ion-title>
-    <button ion-button color="calm" menuToggle="right" end>
-      <ion-icon name="arrow-dropup-circle"></ion-icon>
+<ion-content padding>
+  <ion-fab mini bottom right>
+    <button ion-fab icon-only color="primary" menuToggle="right">
+      <ion-icon name="add-circle"></ion-icon>
     </button>
-  </ion-toolbar>
+  </ion-fab>
+  <ion-list>
 
-</ion-footer>
+    <ion-item>
+      <ion-label>Medicina interna:</ion-label>
+      <ion-toggle [(ngModel)]="valoracion1"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Cardiologia</ion-label>
+      <ion-toggle [(ngModel)]="valoracion2"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Endocrinologia:</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Oftamología:</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+  </ion-list>
+  <ion-label color="primary">OBSERVACIONES:</ion-label>
+  <textarea rows="4" cols="35"> </textarea>
+  <ion-label color="primary">OTROS:</ion-label>
+  <textarea rows="4" cols="35"> </textarea>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">CITA DE CONTROL</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="15">15 días</ion-option>
+        <ion-option value="30">30 días</ion-option>
+        <ion-option value="60">60 días</ion-option>
+        <ion-option value="90">90 días</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">MEDICO CITA<BR>DE CONTROL</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="15">15 días</ion-option>
+        <ion-option value="30">30 días</ion-option>
+        <ion-option value="60">60 días</ion-option>
+        <ion-option value="90">90 días</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">ESPECIALIDAD</ion-label>
+      <ion-input placeholder="Especialidad..."></ion-input>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

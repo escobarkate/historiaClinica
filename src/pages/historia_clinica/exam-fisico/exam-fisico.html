@@ -3,24 +3,159 @@
     <button ion-button menuToggle="left" start>
       <ion-icon name="menu"></ion-icon>
     </button>
-    
-
+    <ion-title>
+      Riesgo cardiovascular (RCV)
+    </ion-title>
   </ion-navbar>
 
-  
+  <ion-toolbar class="toolbar">
+    <ion-title>Examen fisico</ion-title>
+  </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
-  
-</ion-content>
 
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Examen Fisico</ion-title>
-    <button ion-button color="calm" menuToggle="right" end>
-      <ion-icon name="arrow-dropup-circle"></ion-icon>
+  <ion-fab mini bottom right>
+    <button ion-fab icon-only color="primary" menuToggle="right">
+      <ion-icon name="add-circle"></ion-icon>
     </button>
-  </ion-toolbar>
-
-</ion-footer>
-
+  </ion-fab>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-40 padding-left><label >Normal</label></ion-col>
+      <ion-col width-20>
+        <ion-toggle class="btn"></ion-toggle>
+      </ion-col>
+      <ion-col width-40><label >Anormal</label></ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="btn">
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">ESTADO</ion-label>
+        <ion-toggle [(ngModel)]="HTA" class="btn"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">CABEZA</ion-label>
+        <ion-toggle [(ngModel)]="ENFENDOCRINA" class="btn"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">OJOS</ion-label>
+        <ion-toggle [(ngModel)]="CACOLON" class="btn"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">BOCA</ion-label>
+        <ion-toggle [(ngModel)]="DIABETES" class="btn"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">CUELLO</ion-label>
+        <ion-toggle [(ngModel)]="pepperoni" class="btn"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">TORAX</ion-label>
+        <ion-toggle [(ngModel)]="ENFRENAL" class="btn"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">CORAZÓN</ion-label>
+        <ion-toggle [(ngModel)]="OBESIDAD"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">PULMONES</ion-label>
+        <ion-toggle [(ngModel)]="ENFCORONARIA"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">ABDOMEN</ion-label>
+        <ion-toggle [(ngModel)]="CAMAMA" class="btn"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">GENITOURINARIO</ion-label>
+        <ion-toggle [(ngModel)]="DISLIPIDEMIA" class="btn"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">EXTREMIDADES</ion-label>
+        <ion-toggle [(ngModel)]="CAGASTRICO" class="btn"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">NEUROLOGICO</ion-label>
+        <ion-toggle if [(ngModel)]="ENFVASCULAR" class="btn"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label color="primary">MUSCULO-<br>ESQUELETICO:</ion-label>
+        <ion-toggle [(ngModel)]="pepperoni" class="btn"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19"> </textarea>
+      </ion-col>
+      <ion-row>
+        <ion-col>
+          <ion-label color="primary">PIEL</ion-label>
+          <ion-toggle [(ngModel)]="pepperoni" class="btn"></ion-toggle>
+        </ion-col>
+        <ion-col>
+          <textarea rows="4" cols="19"> </textarea>
+        </ion-col>
+      </ion-row>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,25 +1,43 @@
 <ion-header>
-<ion-navbar color="primary">
-  <button ion-button menuToggle="left" start>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle="left" start>
       <ion-icon name="menu"></ion-icon>
     </button>
+    <ion-title>
+      Riesgo cardiovascular (RCV)
+    </ion-title>
+  </ion-navbar>
 
-
-</ion-navbar>
-
-
+  <ion-toolbar class="toolbar">
+    <ion-title>Antecedentes farmacologicos</ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+   <ion-fab mini bottom right>
+    <button ion-fab icon-only color="primary" menuToggle="right">
+      <ion-icon name="add-circle"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-label color="primary">MEDICACION PREVIA:</ion-label>
+  <textarea rows="4" cols="35"> </textarea>
+  <ion-label color="primary">PROFESIONAL QUE PRESCRIBE EL  <br>MEDICAMENTO:</ion-label>
+  <ion-input placeholder="Máximo 50 caracteres" type="text"></ion-input>
+
+  <ion-list>
+    
+    <ion-item>
+      <ion-label>Adherencia al <br>tratamiento:</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Alérgico a <br> medicamentos:</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <ion-label color="primary">CUALES?</ion-label>
+  <textarea rows="4" cols="35"> </textarea>
 
 </ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Antecedentes Farmacologicos</ion-title>
-    <button ion-button color="calm" menuToggle="right" end>
-      <ion-icon name="arrow-dropup-circle"></ion-icon>
-    </button>
-  </ion-toolbar>
-
-</ion-footer>
