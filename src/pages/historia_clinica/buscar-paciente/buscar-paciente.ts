@@ -1,4 +1,5 @@
 import { Component,ViewChild,ElementRef  } from '@angular/core';
+import { Storage } from '@ionic/storage';
 import { Tabs, NavController, NavParams ,ToastController,PopoverController } from 'ionic-angular';
 import { HistoriaPage } from '../datos-principales/historia';
 import { AntFamiliaresPage } from '../ant-familiares/ant-familiares';
@@ -17,6 +18,10 @@ import { RevisionSistemasPage } from '../revision-sistemas/revision-sistemas';
 import { SolValoracionPage } from '../sol-valoracion/sol-valoracion';
 import { ViolenciaIntraPage } from '../violencia-intra/violencia-intra';
 import { BuscarPaPage } from '../buscar-pa/buscar-pa';
+import { Paciente } from '../../../models/paciente';
+import { historiaClinica } from '../../../models/historiaClinica';
+import { HttpClientProvider } from '../../../providers/http-client/http-client';
+
 
 
 
@@ -66,8 +71,12 @@ export class PopoverPage {
 })
 export class BuscarPacientePage {
 
+  paciente: Paciente;
+  historia: historiaClinica=[] ;
+  cedula:string="";
   @ViewChild('popsTabs') tabRef : Tabs; 
-    tab1Root = HistoriaPage;//HistoriaPage;
+
+    tab1Root = HistoriaPage;
     tab2Root = ReporteExamenesPage ;
     tab3Root = AntFamiliaresPage;
     tab4Root = AntPersonalesPage;
@@ -84,9 +93,33 @@ export class BuscarPacientePage {
     tab15Root = ObservacionesPage;
   
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,  private toast: ToastController,public popoverCtrl: PopoverController) {
-   
+  constructor(public navCtrl: NavController, public navParams: NavParams,  
+    public http: HttpClientProvider, private toast: ToastController
+    ,public popoverCtrl: PopoverController, public storage:Storage) {
+    this.cedula = navParams.get('id');
+    this.paciente={
+      nombre:"",cedula:"",edad:0,genero:"",administracion:"",his:this.historia 
+    };
+    
+    this.http.getByCed(this.cedula).subscribe(pac => {
+      this.initializeItems(pac, null);
+    }, err => {
+      this.initializeItems(null, err);
+    });
   }
+
+   initializeItems(paci:Paciente, err: string){
+    if(err){
+      console.log(err);
+    }else{
+      this.paciente= paci;
+      let value = JSON.stringify(this.paciente);
+      console.log(value);
+      this.storage.set("paciente",value);    
+    }
+      
+  }
+
    presentPopover(myEvent) {
     let popover = this.popoverCtrl.create(PopoverPage,{
       tabRef: this.tabRef

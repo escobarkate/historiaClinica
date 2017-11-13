@@ -1,6 +1,10 @@
-
 <ion-header>
-
+  <ion-navbar>
+    <button ion-button menuToggle="left">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>BUSCAR PACIENTE</ion-title>
+  </ion-navbar>
 </ion-header>
 
 
@@ -18,7 +22,7 @@
     <div *ngSwitchCase="'nombre'">
       <ion-searchbar (ionInput)="getItemsN($event)"></ion-searchbar>
       <ion-list>
-        <ion-item *ngFor="let item of pac" (click)="goToDatosP()">
+        <ion-item *ngFor="let item of pac" (click)="goToDatosP(item.cedula)">
           <h3> {{item.nombre}}</h3>
         </ion-item>
       </ion-list>
@@ -26,7 +30,7 @@
     <div *ngSwitchCase="'cedula'">
       <ion-searchbar (ionInput)="getItemsC($event)"></ion-searchbar>
       <ion-list>
-        <ion-item *ngFor="let item of pac" (click)="goToDatosP()">
+        <ion-item *ngFor="let item of pac" (click)="goToDatosP(item.cedula)">
           <h3> {{item.cedula}}</h3>
         </ion-item>
       </ion-list>

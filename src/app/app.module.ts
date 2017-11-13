@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { MensajePage } from '../pages/mensaje/mensaje';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { IonicStorageModule } from '@ionic/storage';
 import { HistoriaPage } from '../pages/historia_clinica/datos-principales/historia';
 import { AntFamiliaresPage } from '../pages/historia_clinica/ant-familiares/ant-familiares';
 import { AntFarmacologicosPage } from '../pages/historia_clinica/ant-farmacologicos/ant-farmacologicos';
@@ -30,7 +31,7 @@ import { BuscarPacientePage,PopoverPage } from '../pages/historia_clinica/buscar
 import { BuscarPaPage } from '../pages/historia_clinica/buscar-pa/buscar-pa';
 import { HistoriaClinicaData } from '../providers/historiaClinica';
 import { HttpClientProvider } from '../providers/http-client/http-client';
-
+import {NativeStorage} from '@ionic-native/native-storage';
 
 
 @NgModule({
@@ -66,6 +67,7 @@ import { HttpClientProvider } from '../providers/http-client/http-client';
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -98,9 +100,10 @@ import { HttpClientProvider } from '../providers/http-client/http-client';
   providers: [
     StatusBar,
     SplashScreen,
-    HistoriaClinicaData,
+    HistoriaClinicaData,    
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    HttpClientProvider
+    HttpClientProvider,
+    NativeStorage
   ]
 })
 export class AppModule {}

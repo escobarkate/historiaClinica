@@ -35,7 +35,7 @@ import { BuscarPaPage } from '../pages/historia_clinica/buscar-pa/buscar-pa';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = BuscarPaPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -47,12 +47,12 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
-      { title: 'Mensaje', component: MensajePage },
-      { title: 'Historia', component: HistoriaPage },
-      { title: 'Buscar Paciente', component: BuscarPacientePage },
-      { title: 'Buscar Paciente 2', component: BuscarPaPage }
+      // { title: 'Home', component: HomePage },
+      // { title: 'List', component: ListPage },
+      // { title: 'Mensaje', component: MensajePage },
+      // { title: 'Historia', component: HistoriaPage },
+      // { title: 'Buscar Paciente', component: BuscarPacientePage },
+      { title: 'Buscar Paciente', component: BuscarPaPage }
     ];
 
     this.pagesHC = [

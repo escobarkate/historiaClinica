@@ -13,13 +13,13 @@
     </ion-buttons>
   </ion-navbar>
   <ion-toolbar color="green" class="toolbar">
-    <ion-title>Teresa Lopez Muñoz</ion-title>
+    <ion-title>Riesgo Cardiovascular</ion-title>
   </ion-toolbar> 
 </ion-header>
 
 <ion-content>
   <ion-tabs #popsTabs>
-    <ion-tab [root]="tab1Root"></ion-tab>
+    <ion-tab [root]="tab1Root" [rootParams]="navParams.data" ></ion-tab>
     <ion-tab [root]="tab2Root"></ion-tab>
     <ion-tab [root]="tab3Root"></ion-tab>
     <ion-tab [root]="tab4Root"></ion-tab>

@@ -17,8 +17,8 @@ export class HttpClientProvider {
   getAll():Observable<Paciente[]>{
     return this.http.get("https://ionic-jpa-farmalisto.herokuapp.com/pacientes").map(this.proccessResponse).catch(this.proccessCatch);
   }
-  getByCed():Observable<Paciente>{
-    return this.http.get("https://ionic-jpa-farmalisto.herokuapp.com/pacientes").map(this.proccessResponse).catch(this.proccessCatch);
+  getByCed(id:string):Observable<Paciente>{
+    return this.http.get("https://ionic-jpa-farmalisto.herokuapp.com/pacientes/"+id).map(this.proccessResponse).catch(this.proccessCatch);
   }
   postPaciente(pa:Paciente):Observable<boolean>{
     return this.http.post("https://ionic-jpa-farmalisto.herokuapp.com/pacientes",pa).map(this.proccessInsert).catch(this.proccessCatch);
