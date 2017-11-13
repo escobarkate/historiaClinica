@@ -4,14 +4,13 @@
       <ion-icon name="menu"></ion-icon>
     </button>
   </ion-navbar>
-
-  <ion-toolbar class="toolbar">
-    <ion-title>Antecedentes Personales</ion-title>
-  </ion-toolbar>
 </ion-header>
 
 
 <ion-content>
+  <ion-toolbar class="toolbar">
+    <ion-title>Antecedentes Personales</ion-title>
+  </ion-toolbar>
   <ion-fab mini bottom right>
     <button ion-fab icon-only color="primary" menuToggle="right">
       <ion-icon name="add-circle"></ion-icon>
@@ -80,7 +79,7 @@
     <ion-col>
       <textarea rows="4" cols="19"> </textarea>
     </ion-col>
-    </ion-row> -->
+    </ion-row> 
 
      <ion-row>
       <ion-col>
@@ -201,8 +200,8 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-label color="primary">FIEBRE REUMATICA:</ion-label>
-        <ion-toggle [(ngModel)]="FIEBREREUMATICA"></ion-toggle>
+        <ion-label color="primary">FIEBRE <br> REUMATICA:</ion-label>
+        <ion-toggle [(ngModel)]="FIEBREREUMATICA" class="btn1"></ion-toggle>
       </ion-col>
       <ion-col>
         <textarea rows="4" cols="19"> </textarea>
@@ -255,8 +254,8 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-label color="primary">FIEBRE AMARILLA</ion-label>
-        <ion-toggle [(ngModel)]="FIEBREA"></ion-toggle>
+        <ion-label color="primary">FIEBRE <br>AMARILLA</ion-label>
+        <ion-toggle [(ngModel)]="FIEBREA" class="btn1"></ion-toggle>
       </ion-col>
       <ion-col>
         <textarea rows="4" cols="19"> </textarea>
@@ -277,7 +276,7 @@
         <ion-toggle [(ngModel)]="HTA"></ion-toggle>
       </ion-col>
       <ion-col>
-        <textarea rows="4" cols="19"> GENITO</textarea>
+        <textarea rows="4" cols="19"></textarea>
       </ion-col>
     </ion-row> 
   </ion-grid>

@@ -24,7 +24,7 @@ import { RevisionSistemasPage } from '../pages/historia_clinica/revision-sistema
 import { SignosVitalesPage } from '../pages/historia_clinica/signos-vitales/signos-vitales';
 import { SolValoracionPage } from '../pages/historia_clinica/sol-valoracion/sol-valoracion';
 import { ViolenciaIntraPage } from '../pages/historia_clinica/violencia-intra/violencia-intra';
-import { BuscarPacientePage } from '../pages/historia_clinica/buscar-paciente/buscar-paciente';
+import { BuscarPacientePage,PopoverPage } from '../pages/historia_clinica/buscar-paciente/buscar-paciente';
 import { BuscarPaPage } from '../pages/historia_clinica/buscar-pa/buscar-pa';
 
 

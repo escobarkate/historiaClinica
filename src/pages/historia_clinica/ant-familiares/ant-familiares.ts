@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { HistoriaClinicaData, HistoriaClinica } from '../../../providers/historiaClinica';
 
 
 @Component({
@@ -7,8 +8,10 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'ant-familiares.html',
 })
 export class AntFamiliaresPage {
+  HC:HistoriaClinica;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+   
   }
 
   ionViewDidLoad() {

@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the BuscarPaPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { HistoriaPage } from '..//datos-principales/historia';
+import { Paciente } from '../../../providers/paciente';
 
 
 @Component({
@@ -65,6 +60,12 @@ export class BuscarPaPage {
         return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
+  }
+
+  goToDatosP() {
+    //this.navCtrl.setRoot(HistoriaPage);
+    this.navCtrl.push(HistoriaPage);
+  
   }
   
 

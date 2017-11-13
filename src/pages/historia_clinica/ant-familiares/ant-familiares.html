@@ -7,14 +7,18 @@
       Riesgo cardiovascular (RCV)
     </ion-title>
   </ion-navbar>
-
-  <ion-toolbar class="toolbar">
-    <ion-title>Antecedentes familiares</ion-title>
+  <ion-toolbar color="green" class="toolbar">
+    <ion-title>Teresa Lopez Muñoz</ion-title>
   </ion-toolbar>
+
+  
 </ion-header>
 
 
 <ion-content>
+  <ion-toolbar class="toolbar">
+    <ion-title>Antecedentes familiares</ion-title>
+  </ion-toolbar>
   <ion-fab mini bottom right>
       <button ion-fab icon-only color="primary" menuToggle="right">
       <ion-icon name="add-circle"></ion-icon>
@@ -24,118 +28,119 @@
     <ion-row  >
       <ion-col >               
         <ion-label  color="primary">HTA:</ion-label>   
-        <ion-toggle  [(ngModel)]="HTA"></ion-toggle>
+        <ion-toggle  [(ngModel)]="HC.familiares1"></ion-toggle>
       </ion-col>
       <ion-col  >       
-        <textarea rows="4" cols="19"> </textarea>
+        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares1o"> </textarea>
       </ion-col>
     </ion-row>
     <ion-row  >
       <ion-col >               
         <ion-label  color="primary">ENF. ENDOCRINA</ion-label>   
-        <ion-toggle  [(ngModel)]="ENFENDOCRINA"></ion-toggle>
+        <ion-toggle  [(ngModel)]="HC.familiares2"></ion-toggle>
       </ion-col>
       <ion-col  >       
-        <textarea rows="4" cols="19"> </textarea>
+        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares2o"> </textarea>
       </ion-col>
     </ion-row>
     <ion-row  >
       <ion-col >               
         <ion-label  color="primary">CA. COLON:</ion-label>   
-        <ion-toggle  [(ngModel)]="CACOLON"></ion-toggle>
+        <ion-toggle [(ngModel)]="HC.familiares3"></ion-toggle>
       </ion-col>
       <ion-col  >       
-        <textarea rows="4" cols="19"> </textarea>
+        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares3o"> </textarea>
       </ion-col>
     </ion-row>
     <ion-row  >
       <ion-col >               
         <ion-label  color="primary">DIABETES:</ion-label>   
-        <ion-toggle  [(ngModel)]="DIABETES"></ion-toggle>
+        <ion-toggle [(ngModel)]="HC.familiares4"></ion-toggle>
       </ion-col>
       <ion-col  >       
-        <textarea rows="4" cols="19"> </textarea>
+        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares4o"> </textarea>
       </ion-col>
     </ion-row>
     <ion-row  >
       <ion-col >               
         <ion-label  color="primary">GU Y PROSTATA</ion-label>   
-        <ion-toggle  [(ngModel)]="pepperoni"></ion-toggle>
+        <ion-toggle  [(ngModel)]="HC.familiares5"></ion-toggle>
       </ion-col>
       <ion-col  >       
-        <textarea rows="4" cols="19"> </textarea>
+        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares5o"> </textarea>
       </ion-col>
     </ion-row>
     <ion-row  >
       <ion-col >               
         <ion-label  color="primary">ENF RENAL:</ion-label>   
-        <ion-toggle  [(ngModel)]="ENFRENAL"></ion-toggle>
+        <ion-toggle  [(ngModel)]="HC.familiares6"></ion-toggle>
       </ion-col>
       <ion-col  >       
-        <textarea rows="4" cols="19"> </textarea>
+        <textarea rows="4" cols="19"[(ngModel)]="HC.familiares6o"> </textarea>
       </ion-col>
     </ion-row>
     <ion-row  >
       <ion-col >               
         <ion-label  color="primary">OBESIDAD:</ion-label>   
-        <ion-toggle  [(ngModel)]="OBESIDAD"></ion-toggle>
+        <ion-toggle  [(ngModel)]="HC.familiares7"></ion-toggle>
       </ion-col>
       <ion-col  >       
-        <textarea rows="4" cols="19"> </textarea>
+        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares7o"> </textarea>
       </ion-col>
     </ion-row>
     <ion-row  >
       <ion-col >               
         <ion-label  color="primary">ENF. CORONARIA:</ion-label>   
-        <ion-toggle  [(ngModel)]="ENFCORONARIA"></ion-toggle>
+        <ion-toggle [(ngModel)]="HC.familiares8"></ion-toggle>
       </ion-col>
       <ion-col  >       
-        <textarea rows="4" cols="19"> </textarea>
+        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares8o
+        "> </textarea>
       </ion-col>
     </ion-row>
     <ion-row  >
       <ion-col >               
         <ion-label  color="primary">CA. MAMA:</ion-label>   
-        <ion-toggle  [(ngModel)]="CAMAMA"></ion-toggle>
+        <ion-toggle  [(ngModel)]="HC.familiares9"></ion-toggle>
       </ion-col>
       <ion-col  >       
-        <textarea rows="4" cols="19"> </textarea>
+        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares9o"> </textarea>
       </ion-col>
     </ion-row>
     <ion-row  >
       <ion-col >               
         <ion-label  color="primary">DISLIPIDEMIA</ion-label>   
-        <ion-toggle  [(ngModel)]="DISLIPIDEMIA"></ion-toggle>
+        <ion-toggle [(ngModel)]="HC.familiares10"></ion-toggle>
       </ion-col>
       <ion-col  >       
-        <textarea rows="4" cols="19"> </textarea>
+        <textarea rows="4" cols="19"[(ngModel)]="HC.familiares10o"> </textarea>
       </ion-col>
     </ion-row>
     <ion-row  >
       <ion-col >               
         <ion-label  color="primary">CA. GASTRICO</ion-label>   
-        <ion-toggle  [(ngModel)]="CAGASTRICO"></ion-toggle>
+        <ion-toggle  [(ngModel)]="HC.familiares11"></ion-toggle>
       </ion-col>
       <ion-col  >       
-        <textarea rows="4" cols="19"> </textarea>
+        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares11o"> </textarea>
       </ion-col>
     </ion-row>
     <ion-row  >
       <ion-col >               
         <ion-label  color="primary">ENF. VASCULAR:</ion-label>   
-        <ion-toggle  [(ngModel)]="ENFVASCULAR"></ion-toggle>
+        <ion-toggle  [(ngModel)]="HC.familiares12"></ion-toggle>
       </ion-col>
       <ion-col  >       
-        <textarea rows="4" cols="19"> </textarea>
+        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares12o"> </textarea>
       </ion-col>
     </ion-row>
     <ion-row  >
       <ion-col >               
         <ion-label  color="primary">GO/CERVIX:</ion-label>   
-        <ion-toggle  [(ngModel)]="pepperoni"></ion-toggle>
+        <ion-toggle  [(ngModel)]="HC.familiares13"></ion-toggle>
       </ion-col>
       <ion-col  >       
-        <textarea rows="4" cols="19"> </textarea>
+        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares13o"> </textarea>
       </ion-col>
     </ion-row>
   </ion-grid>
