@@ -1,14 +1,6 @@
 
 <ion-header>
 
-  <!-- <ion-navbar color="primary">
-    <button ion-button menuToggle="left" start>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>
-      Buscar paciente
-    </ion-title>
-  </ion-navbar> -->
 </ion-header>
 
 
@@ -26,16 +18,16 @@
     <div *ngSwitchCase="'nombre'">
       <ion-searchbar (ionInput)="getItemsN($event)"></ion-searchbar>
       <ion-list>
-        <ion-item *ngFor="let item of nombres" (click)="goToDatosP()">
-          <h3> {{item}}</h3>
+        <ion-item *ngFor="let item of pac" (click)="goToDatosP()">
+          <h3> {{item.nombre}}</h3>
         </ion-item>
       </ion-list>
     </div>
     <div *ngSwitchCase="'cedula'">
       <ion-searchbar (ionInput)="getItemsC($event)"></ion-searchbar>
       <ion-list>
-        <ion-item *ngFor="let item of cedulas" (click)="goToDatosP()">
-          <h3> {{item}}</h3>
+        <ion-item *ngFor="let item of pac" (click)="goToDatosP()">
+          <h3> {{item.cedula}}</h3>
         </ion-item>
       </ion-list>
     </div>
