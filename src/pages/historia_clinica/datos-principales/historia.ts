@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { MenuController } from 'ionic-angular';
-import { DatPrincipales } from '../../../providers/historiaClinica';
 
 @Component({
   selector: 'page-historia',
@@ -23,12 +22,6 @@ constructor(public navCtrl: NavController, public menuCtrl: MenuController) {
       }
   }
 
-
-   
- 
-
-
-
  toggleLeftMenu() {
      this.menuCtrl.open();
   this.menuCtrl.toggle();
@@ -38,4 +31,14 @@ toggleRightMenu() {
     this.menuCtrl.open();
   this.menuCtrl.toggle('right');
 }
+}
+
+
+export class DatPrincipales{
+    nombreAcu:string;
+    parentesco:string;
+    telefono:number;
+    tipoConsul:string;
+    motivo:string;
+    enfActual:string;
 }

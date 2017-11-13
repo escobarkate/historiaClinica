@@ -1,5 +1,5 @@
 import { Component,ViewChild,ElementRef  } from '@angular/core';
-import { Slides, NavController, NavParams ,ToastController,PopoverController } from 'ionic-angular';
+import { Tabs, NavController, NavParams ,ToastController,PopoverController } from 'ionic-angular';
 import { HistoriaPage } from '../datos-principales/historia';
 import { AntFamiliaresPage } from '../ant-familiares/ant-familiares';
 import { AntFarmacologicosPage } from '../ant-farmacologicos/ant-farmacologicos';
@@ -35,22 +35,22 @@ import { BuscarPaPage } from '../buscar-pa/buscar-pa';
 export class PopoverPage {
   
   menu:string[];
-  slideEle:Slides;
+  tabsEle:Tabs;
   constructor(private navParams: NavParams) {
    this.menu = ['DATOS PRINCIPALES', 'REPORTE', 'ANTECEDENTES FAMILIARES', 'ANTECEDENTES PERSONALES', 
    'ANTECEDENTES FARMACOLOGICOS ', 'TEST DE MOSRISKY','VIOLENCIA INTRAFAMILIAR','REVISIÓN POR SISTEMAS',
-     'EXAMEN FISICO', 'DIAGNOSTICO', 'PARACLINICO','TRATAMIENTO NO FARMACOLOFICO','PROMOCION DE FACTORES PROTECTORES',
-     'SOLICITUD DE VALORACION POR ESPECIALISTA','IDENTIFICACION DE RIESGOS','OBSERVACIONES/HALLAZGOS'];
+     'EXAMEN FISICO', 'DIAGNOSTICO', 'PARACLINICO','TRATAMIENTO NO FARMACOLOGICO','PROMOCION DE FACTORES PROTECTORES',
+     'SOLICITUD DE VALORACION POR ESPECIALISTA','OBSERVACIONES/HALLAZGOS'];
   }
 
    ngOnInit() {
     if (this.navParams.data) {
-      this.slideEle = this.navParams.data.slideEle;
+      this.tabsEle = this.navParams.data.tabRef;
       //this.slideEle.slideTo(0,500);
     }
   }
  itemSelected(i:number){
-       this.slideEle.slideTo(i,500);
+       this.tabsEle.select(i);
        console.log(i);
    
  }
@@ -66,6 +66,7 @@ export class PopoverPage {
 })
 export class BuscarPacientePage {
 
+  @ViewChild('popsTabs') tabRef : Tabs; 
     tab1Root = HistoriaPage;//HistoriaPage;
     tab2Root = ReporteExamenesPage ;
     tab3Root = AntFamiliaresPage;
@@ -80,15 +81,15 @@ export class BuscarPacientePage {
     tab12Root = NoFarmaPage;
     tab13Root = FactProtectoresPage;
     tab14Root = SolValoracionPage ;
-    tab15Root = IdRiesgosPage;
-    tab16Root = ObservacionesPage;
+    tab15Root = ObservacionesPage;
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams,  private toast: ToastController,public popoverCtrl: PopoverController) {
    
   }
    presentPopover(myEvent) {
     let popover = this.popoverCtrl.create(PopoverPage,{
-      //slideEle: this.slides
+      tabRef: this.tabRef
     });
     popover.present({
       ev: myEvent

@@ -1,14 +1,5 @@
 <ion-header>
-  <!-- <ion-navbar color="primary">
-    <button ion-button menuToggle="left" start>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>
-      Riesgo cardiovascular (RCV)
-    </ion-title> 
-  </ion-navbar>-->
 
-  
 </ion-header>
 
 <ion-content>
@@ -21,74 +12,9 @@
     </button>
   </ion-fab>
   <ion-list>
-    <ion-item>
-      <ion-label>5 frutas y verduras al día</ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Reducción de ingesta calórica</ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>No consumo de alcohol</ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Dieta baja en grasa </ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-    </ion-item>
-
-     <ion-item>
-      <ion-label>Actividad fisica (Norma OMS) </ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>No consumo de tabaco</ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Manejo de estres y ansiedad</ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Dieta baja en sal </ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Dieta naja en azucares </ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label> Control periodico de peso</ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Comunicacion intrafamiliar</ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Auto examen de seno </ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Higiene oral </ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Auto cuidado y aseo </ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Auto examen de testiculo</ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label> Cumplir citas programadas</ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Realización de citologias </ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    <ion-item *ngFor="let f of factPro">
+      <ion-label> {{f.nombre}} </ion-label>
+      <ion-toggle [(ngModel)]="f.solicitado"></ion-toggle>
     </ion-item> 
   </ion-list>
 

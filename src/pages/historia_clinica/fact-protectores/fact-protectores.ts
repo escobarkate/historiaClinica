@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HistoriaClinicaData, DatParaclinico } from '../../../providers/historiaClinica';
 
 
 @Component({
@@ -8,11 +9,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FactProtectoresPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  factPro:DatParaclinico[];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public service:HistoriaClinicaData) {
+    this.factPro=[];
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FactProtectoresPage');
+    this.factPro=this.service.dataFactProctectores;
   }
 
 }

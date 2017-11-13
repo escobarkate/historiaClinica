@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { HistoriaClinicaData, DatFamiliares } from '../../../providers/historiaClinica';
 
 @Component({
   selector: 'page-exam-fisico',
@@ -8,11 +8,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ExamFisicoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  ex:DatFamiliares[]; 
+  constructor(public navCtrl: NavController, public navParams: NavParams, public service: HistoriaClinicaData) {
+      this.ex=[];
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ExamFisicoPage');
+    this.ex = this.service.dataExmFisico;
   }
 
 }

@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { HistoriaClinicaData , DatFarmacologicos } from '../../../providers/historiaClinica';
-
-
-
 
 @Component({
   selector: 'page-ant-farmacologicos',
@@ -25,4 +21,12 @@ export class AntFarmacologicosPage {
     console.log('ionViewDidLoad AntFarmacologicosPage');
   }
 
+}
+
+export class DatFarmacologicos {
+    medprevia:string;
+    prof:string;
+    adherencia:boolean;
+    alergia:boolean;
+    alergias:string;
 }

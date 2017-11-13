@@ -7,13 +7,23 @@ import { IonicPage, NavController, NavParams,ViewController } from 'ionic-angula
   templateUrl: 'observaciones.html',
 })
 export class ObservacionesPage {
-
+  Obs: DatObservaciones;
   constructor(public navCtrl: NavController, public navParams: NavParams,public viewCtrl: ViewController) {
+    this.Obs= {
+      observaciones:"",
+      remision:"",
+      analisis:""
+    };
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ObservacionesPage');
+    
   }
   
+}
 
+export class DatObservaciones {
+   observaciones: string;
+   remision: string;
+   analisis: string;
 }

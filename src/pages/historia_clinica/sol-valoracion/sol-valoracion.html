@@ -1,12 +1,5 @@
 <ion-header>
-  <!-- <ion-navbar color="primary">
-    <button ion-button menuToggle="left" start>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>
-      Riesgo cardiovascular (RCV)
-    </ion-title>
-  </ion-navbar> -->
+
 </ion-header>
 
 <ion-content padding>
@@ -22,29 +15,29 @@
 
     <ion-item>
       <ion-label>Medicina interna:</ion-label>
-      <ion-toggle [(ngModel)]="valoracion1"></ion-toggle>
+      <ion-toggle [(ngModel)]="solVal.medicinainterna"></ion-toggle>
     </ion-item>
     <ion-item>
       <ion-label>Cardiologia</ion-label>
-      <ion-toggle [(ngModel)]="valoracion2"></ion-toggle>
+      <ion-toggle [(ngModel)]="solVal.cardiologia"></ion-toggle>
     </ion-item>
     <ion-item>
       <ion-label>Endocrinologia:</ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+      <ion-toggle [(ngModel)]="solVal.endocrinologia"></ion-toggle>
     </ion-item>
     <ion-item>
       <ion-label>Oftamología:</ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+      <ion-toggle [(ngModel)]="solVal.oftamologia"></ion-toggle>
     </ion-item>
   </ion-list>
   <ion-label color="primary">OBSERVACIONES:</ion-label>
-  <textarea rows="4" cols="35"> </textarea>
+  <textarea rows="4" cols="35" [(ngModel)] ="solVal.observaciones"> </textarea>
   <ion-label color="primary">OTROS:</ion-label>
-  <textarea rows="4" cols="35"> </textarea>
+  <textarea rows="4" cols="35" [(ngModel)]="solVal.otros" > </textarea>
   <ion-list>
     <ion-item>
       <ion-label color="primary">CITA DE CONTROL</ion-label>
-      <ion-select [(ngModel)]="gender">
+      <ion-select [(ngModel)]="solVal.citacontrol">
         <ion-option value="15">15 días</ion-option>
         <ion-option value="30">30 días</ion-option>
         <ion-option value="60">60 días</ion-option>
@@ -53,7 +46,7 @@
     </ion-item>
     <ion-item>
       <ion-label color="primary">MEDICO CITA<BR>DE CONTROL</ion-label>
-      <ion-select [(ngModel)]="gender">
+      <ion-select [(ngModel)]="solVal.medicoControl">
         <ion-option value="15">15 días</ion-option>
         <ion-option value="30">30 días</ion-option>
         <ion-option value="60">60 días</ion-option>
@@ -62,7 +55,7 @@
     </ion-item>
     <ion-item>
       <ion-label color="primary">ESPECIALIDAD</ion-label>
-      <ion-input placeholder="Especialidad..."></ion-input>
+      <ion-input placeholder="Especialidad..." [(ngModel)]="solVal.especialidad" ></ion-input>
     </ion-item>
   </ion-list>
 

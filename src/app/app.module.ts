@@ -29,6 +29,7 @@ import { ViolenciaIntraPage } from '../pages/historia_clinica/violencia-intra/vi
 import { BuscarPacientePage,PopoverPage } from '../pages/historia_clinica/buscar-paciente/buscar-paciente';
 import { BuscarPaPage } from '../pages/historia_clinica/buscar-pa/buscar-pa';
 import { HistoriaClinicaData } from '../providers/historiaClinica';
+import { HttpClientProvider } from '../providers/http-client/http-client';
 
 
 
@@ -97,7 +98,8 @@ import { HistoriaClinicaData } from '../providers/historiaClinica';
     StatusBar,
     SplashScreen,
     HistoriaClinicaData,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HttpClientProvider
   ]
 })
 export class AppModule {}

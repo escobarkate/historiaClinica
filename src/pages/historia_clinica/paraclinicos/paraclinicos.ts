@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HistoriaClinicaData, DatParaclinico } from '../../../providers/historiaClinica';
 
 
 @Component({
@@ -8,11 +9,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ParaclinicosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  para:DatParaclinico[];
+  obs:string;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public service: HistoriaClinicaData) {
+    this.para=[];
+    this.obs="";
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ParaclinicosPage');
+    this.para=this.service.dataParaclinicos;
   }
 
 }

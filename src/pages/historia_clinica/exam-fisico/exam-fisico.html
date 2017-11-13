@@ -1,16 +1,6 @@
 <ion-header>
-  <!-- <ion-navbar color="primary">
-    <button ion-button menuToggle="left" start>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>
-      Riesgo cardiovascular (RCV)
-    </ion-title> 
-  </ion-navbar>-->
 
-  
 </ion-header>
-
 
 <ion-content>
   <ion-toolbar class="toolbar">
@@ -31,131 +21,14 @@
     </ion-row>
   </ion-grid>
   <ion-grid class="btn">
-    <ion-row>
+    <ion-row *ngFor="let e of ex">
       <ion-col>
-        <ion-label color="primary">ESTADO</ion-label>
-        <ion-toggle [(ngModel)]="HTA" class="btn"></ion-toggle>
+        <ion-label color="primary"> {{e.nombreant}} </ion-label>
+        <ion-toggle [(ngModel)]="e.antecedente" class="btn"></ion-toggle>
       </ion-col>
       <ion-col>
-        <textarea rows="4" cols="19"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-label color="primary">CABEZA</ion-label>
-        <ion-toggle [(ngModel)]="ENFENDOCRINA" class="btn"></ion-toggle>
-      </ion-col>
-      <ion-col>
-        <textarea rows="4" cols="19"> </textarea>
+        <textarea rows="4" cols="19" [(ngModel)]="e.observacion" > </textarea>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-label color="primary">OJOS</ion-label>
-        <ion-toggle [(ngModel)]="CACOLON" class="btn"></ion-toggle>
-      </ion-col>
-      <ion-col>
-        <textarea rows="4" cols="19"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-label color="primary">BOCA</ion-label>
-        <ion-toggle [(ngModel)]="DIABETES" class="btn"></ion-toggle>
-      </ion-col>
-      <ion-col>
-        <textarea rows="4" cols="19"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-label color="primary">CUELLO</ion-label>
-        <ion-toggle [(ngModel)]="pepperoni" class="btn"></ion-toggle>
-      </ion-col>
-      <ion-col>
-        <textarea rows="4" cols="19"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-label color="primary">TORAX</ion-label>
-        <ion-toggle [(ngModel)]="ENFRENAL" class="btn"></ion-toggle>
-      </ion-col>
-      <ion-col>
-        <textarea rows="4" cols="19"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-label color="primary">CORAZÓN</ion-label>
-        <ion-toggle [(ngModel)]="OBESIDAD"></ion-toggle>
-      </ion-col>
-      <ion-col>
-        <textarea rows="4" cols="19"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-label color="primary">PULMONES</ion-label>
-        <ion-toggle [(ngModel)]="ENFCORONARIA"></ion-toggle>
-      </ion-col>
-      <ion-col>
-        <textarea rows="4" cols="19"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-label color="primary">ABDOMEN</ion-label>
-        <ion-toggle [(ngModel)]="CAMAMA" class="btn"></ion-toggle>
-      </ion-col>
-      <ion-col>
-        <textarea rows="4" cols="19"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-label color="primary">GENITOURINARIO</ion-label>
-        <ion-toggle [(ngModel)]="DISLIPIDEMIA" class="btn"></ion-toggle>
-      </ion-col>
-      <ion-col>
-        <textarea rows="4" cols="19"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-label color="primary">EXTREMIDADES</ion-label>
-        <ion-toggle [(ngModel)]="CAGASTRICO" class="btn"></ion-toggle>
-      </ion-col>
-      <ion-col>
-        <textarea rows="4" cols="19"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-label color="primary">NEUROLOGICO</ion-label>
-        <ion-toggle if [(ngModel)]="ENFVASCULAR" class="btn"></ion-toggle>
-      </ion-col>
-      <ion-col>
-        <textarea rows="4" cols="19"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-label color="primary">MUSCULO-<br>ESQUELETICO:</ion-label>
-        <ion-toggle [(ngModel)]="pepperoni" class="btn"></ion-toggle>
-      </ion-col>
-      <ion-col>
-        <textarea rows="4" cols="19"> </textarea>
-      </ion-col>
-    </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-label color="primary">PIEL</ion-label>
-          <ion-toggle [(ngModel)]="pepperoni" class="btn"></ion-toggle>
-        </ion-col>
-        <ion-col>
-          <textarea rows="4" cols="19"> </textarea>
-        </ion-col>
-      </ion-row>
   </ion-grid>
 </ion-content>
