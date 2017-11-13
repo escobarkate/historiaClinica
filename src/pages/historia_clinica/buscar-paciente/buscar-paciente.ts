@@ -1,6 +1,25 @@
 import { Component,ViewChild,ElementRef  } from '@angular/core';
 import { Slides, NavController, NavParams ,ToastController,PopoverController } from 'ionic-angular';
-import { ObservacionesPage } from '..//observaciones/observaciones';
+import { HistoriaPage } from '../datos-principales/historia';
+import { AntFamiliaresPage } from '../ant-familiares/ant-familiares';
+import { AntFarmacologicosPage } from '../ant-farmacologicos/ant-farmacologicos';
+import { AntPersonalesPage } from '../ant-personales/ant-personales';
+import { DiagnosticoPage } from '../diagnostico/diagnostico';
+import { ExamFisicoPage } from '../exam-fisico/exam-fisico';
+import { FactProtectoresPage } from '../fact-protectores/fact-protectores';
+import { IdRiesgosPage } from '../identificacion-riesgos/identificacion-riesgos';
+import { MoriskyPage } from '../morisky/morisky';
+import { NoFarmaPage } from '../no-farma/no-farma';
+import { ObservacionesPage } from '../observaciones/observaciones';
+import { ParaclinicosPage } from '../paraclinicos/paraclinicos';
+import { ReporteExamenesPage } from '../reporte-examenes/reporte-examenes';
+import { RevisionSistemasPage } from '../revision-sistemas/revision-sistemas';
+import { SolValoracionPage } from '../sol-valoracion/sol-valoracion';
+import { ViolenciaIntraPage } from '../violencia-intra/violencia-intra';
+import { BuscarPaPage } from '../buscar-pa/buscar-pa';
+
+
+
 
 
 @Component({
@@ -46,29 +65,34 @@ export class PopoverPage {
   templateUrl: 'buscar-paciente.html',
 })
 export class BuscarPacientePage {
-    @ViewChild(Slides) slides: Slides;
+
+    tab1Root = HistoriaPage;//HistoriaPage;
+    tab2Root = ReporteExamenesPage ;
+    tab3Root = AntFamiliaresPage;
+    tab4Root = AntPersonalesPage;
+    tab5Root = AntFarmacologicosPage ;
+    tab6Root = MoriskyPage;
+    tab7Root = ViolenciaIntraPage;
+    tab8Root = RevisionSistemasPage ;
+    tab9Root = ExamFisicoPage;
+    tab10Root = DiagnosticoPage;
+    tab11Root = ParaclinicosPage ;
+    tab12Root = NoFarmaPage;
+    tab13Root = FactProtectoresPage;
+    tab14Root = SolValoracionPage ;
+    tab15Root = IdRiesgosPage;
+    tab16Root = ObservacionesPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,  private toast: ToastController,public popoverCtrl: PopoverController) {
    
   }
    presentPopover(myEvent) {
     let popover = this.popoverCtrl.create(PopoverPage,{
-      slideEle: this.slides
+      //slideEle: this.slides
     });
     popover.present({
       ev: myEvent
     });
-  }
-  goToSlide( ) {
-    this.slides.slideTo(1, 500);
-  }
-   slideChanged() {
-     let msg;
-    let currentIndex = this.slides.getActiveIndex();
-    console.log('Current index is', currentIndex);
-     msg = this.toast.create({ message: "Pantalla" +currentIndex, duration: 3000 });
-  }
-  
-  
+  } 
 
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { HistoriaClinicaData, HistoriaClinica } from '../../../providers/historiaClinica';
+import { HistoriaClinicaData, DatFamiliares } from '../../../providers/historiaClinica';
 
 
 @Component({
@@ -8,14 +8,19 @@ import { HistoriaClinicaData, HistoriaClinica } from '../../../providers/histori
   templateUrl: 'ant-familiares.html',
 })
 export class AntFamiliaresPage {
-  HC:HistoriaClinica;
+  
+  fam:DatFamiliares[];
+  
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-   
+  constructor(public navCtrl: NavController, public navParams: NavParams, public service: HistoriaClinicaData) {
+    this.fam=[];
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AntFamiliaresPage');
+    this.fam=this.service.dataFamiliares;
+  }
+  ionViewDidEnter() {
+    console.log(this.fam[0].antecedente);
   }
 
 }

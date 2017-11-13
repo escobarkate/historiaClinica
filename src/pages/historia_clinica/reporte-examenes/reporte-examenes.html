@@ -1,12 +1,12 @@
 <ion-header>
-  <ion-navbar color="primary">
+  <!-- <ion-navbar color="primary">
     <button ion-button menuToggle="left" start>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
       Riesgo cardiovascular (RCV)
     </ion-title>
-  </ion-navbar>
+  </ion-navbar> -->
 </ion-header>
 
 <ion-content padding>
@@ -21,18 +21,28 @@
 
   <ion-item>
     <ion-label color="primary">Tipo</ion-label>
-    <ion-select [(ngModel)]="gender">
-      <ion-option value="f">Female</ion-option>
-      <ion-option value="m">Male</ion-option>
+    <ion-select [(ngModel)]="report.tipo">
+      <ion-option value="Hemograma">Hemograma</ion-option>
+      <ion-option value="Glise.Basal">Glisemia Basal</ion-option>
+      <ion-option value="Hemo.Glicosil">Hemoglobina Glicosilada</ion-option>
+      <ion-option value="Colest.Total">Colesterol Total</ion-option>
+      <ion-option value="Trigliceridos">Trigliceridos</ion-option>
+      <ion-option value="HDL">HDL</ion-option>
+      <ion-option value="LDL">LDL</ion-option>
+      <ion-option value="Par.Orina">Parcial de Orina</ion-option>
+      <ion-option value="Creat.Ser">Creatinina Serica</ion-option>
+      <ion-option value="Microalbuliminuria">Microalbuliminuria</ion-option>
+      <ion-option value="Electrocardiograma">Electrocardiograma</ion-option>
+
     </ion-select>
   </ion-item>
   <ion-item>
     <ion-label color="primary">FECHA</ion-label>
-    <ion-input type="date" placeholder="Text Input"></ion-input>
+    <ion-input type="date" placeholder="Text Input" [(ngModel)]="report.fecha" ></ion-input>
   </ion-item>
   
-  <ion-label color="primary">DIAGNOSTICO</ion-label>
-  <textarea rows="3" cols="35" > </textarea>
+  <ion-label color="primary">RESULTADO</ion-label>
+  <textarea rows="3" cols="35" [(ngModel)]="report.resultado" > </textarea>
 
   <button ion-button block>Agregar</button>
    

@@ -28,6 +28,7 @@ import { SolValoracionPage } from '../pages/historia_clinica/sol-valoracion/sol-
 import { ViolenciaIntraPage } from '../pages/historia_clinica/violencia-intra/violencia-intra';
 import { BuscarPacientePage,PopoverPage } from '../pages/historia_clinica/buscar-paciente/buscar-paciente';
 import { BuscarPaPage } from '../pages/historia_clinica/buscar-pa/buscar-pa';
+import { HistoriaClinicaData } from '../providers/historiaClinica';
 
 
 
@@ -95,6 +96,7 @@ import { BuscarPaPage } from '../pages/historia_clinica/buscar-pa/buscar-pa';
   providers: [
     StatusBar,
     SplashScreen,
+    HistoriaClinicaData,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

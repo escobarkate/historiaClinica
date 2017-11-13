@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { HistoriaClinicaData, DatFamiliares } from '../../../providers/historiaClinica';
 
 
 @Component({
@@ -8,11 +9,13 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class AntPersonalesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  per:DatFamiliares[];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public service:HistoriaClinicaData) {
+    this.per=[];
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AntPersonalesPage');
+    this.per=this.service.dataPersonales;
   }
 
 }

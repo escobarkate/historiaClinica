@@ -1,19 +1,6 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <button ion-button menuToggle="left" start>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>
-      Riesgo cardiovascular (RCV)
-    </ion-title>
-  </ion-navbar>
-  <ion-toolbar color="green" class="toolbar">
-    <ion-title>Teresa Lopez Muñoz</ion-title>
-  </ion-toolbar>
-
   
 </ion-header>
-
 
 <ion-content>
   <ion-toolbar class="toolbar">
@@ -24,123 +11,14 @@
       <ion-icon name="add-circle"></ion-icon>
     </button>
     </ion-fab>
-  <ion-grid >       
-    <ion-row  >
+  <ion-grid >      
+    <ion-row *ngFor="let f of fam" >
       <ion-col >               
-        <ion-label  color="primary">HTA:</ion-label>   
-        <ion-toggle  [(ngModel)]="HC.familiares1"></ion-toggle>
+        <ion-label  color="primary"> {{f.nombreant}} </ion-label>   
+        <ion-toggle  [(ngModel)]="f.antecedente"></ion-toggle>
       </ion-col>
       <ion-col  >       
-        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares1o"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row  >
-      <ion-col >               
-        <ion-label  color="primary">ENF. ENDOCRINA</ion-label>   
-        <ion-toggle  [(ngModel)]="HC.familiares2"></ion-toggle>
-      </ion-col>
-      <ion-col  >       
-        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares2o"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row  >
-      <ion-col >               
-        <ion-label  color="primary">CA. COLON:</ion-label>   
-        <ion-toggle [(ngModel)]="HC.familiares3"></ion-toggle>
-      </ion-col>
-      <ion-col  >       
-        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares3o"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row  >
-      <ion-col >               
-        <ion-label  color="primary">DIABETES:</ion-label>   
-        <ion-toggle [(ngModel)]="HC.familiares4"></ion-toggle>
-      </ion-col>
-      <ion-col  >       
-        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares4o"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row  >
-      <ion-col >               
-        <ion-label  color="primary">GU Y PROSTATA</ion-label>   
-        <ion-toggle  [(ngModel)]="HC.familiares5"></ion-toggle>
-      </ion-col>
-      <ion-col  >       
-        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares5o"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row  >
-      <ion-col >               
-        <ion-label  color="primary">ENF RENAL:</ion-label>   
-        <ion-toggle  [(ngModel)]="HC.familiares6"></ion-toggle>
-      </ion-col>
-      <ion-col  >       
-        <textarea rows="4" cols="19"[(ngModel)]="HC.familiares6o"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row  >
-      <ion-col >               
-        <ion-label  color="primary">OBESIDAD:</ion-label>   
-        <ion-toggle  [(ngModel)]="HC.familiares7"></ion-toggle>
-      </ion-col>
-      <ion-col  >       
-        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares7o"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row  >
-      <ion-col >               
-        <ion-label  color="primary">ENF. CORONARIA:</ion-label>   
-        <ion-toggle [(ngModel)]="HC.familiares8"></ion-toggle>
-      </ion-col>
-      <ion-col  >       
-        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares8o
-        "> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row  >
-      <ion-col >               
-        <ion-label  color="primary">CA. MAMA:</ion-label>   
-        <ion-toggle  [(ngModel)]="HC.familiares9"></ion-toggle>
-      </ion-col>
-      <ion-col  >       
-        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares9o"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row  >
-      <ion-col >               
-        <ion-label  color="primary">DISLIPIDEMIA</ion-label>   
-        <ion-toggle [(ngModel)]="HC.familiares10"></ion-toggle>
-      </ion-col>
-      <ion-col  >       
-        <textarea rows="4" cols="19"[(ngModel)]="HC.familiares10o"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row  >
-      <ion-col >               
-        <ion-label  color="primary">CA. GASTRICO</ion-label>   
-        <ion-toggle  [(ngModel)]="HC.familiares11"></ion-toggle>
-      </ion-col>
-      <ion-col  >       
-        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares11o"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row  >
-      <ion-col >               
-        <ion-label  color="primary">ENF. VASCULAR:</ion-label>   
-        <ion-toggle  [(ngModel)]="HC.familiares12"></ion-toggle>
-      </ion-col>
-      <ion-col  >       
-        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares12o"> </textarea>
-      </ion-col>
-    </ion-row>
-    <ion-row  >
-      <ion-col >               
-        <ion-label  color="primary">GO/CERVIX:</ion-label>   
-        <ion-toggle  [(ngModel)]="HC.familiares13"></ion-toggle>
-      </ion-col>
-      <ion-col  >       
-        <textarea rows="4" cols="19" [(ngModel)]="HC.familiares13o"> </textarea>
+        <textarea rows="4" cols="19" [(ngModel)]="f.observacion"> </textarea>
       </ion-col>
     </ion-row>
   </ion-grid>
