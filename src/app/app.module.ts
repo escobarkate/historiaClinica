@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
@@ -32,6 +32,15 @@ import { BuscarPaPage } from '../pages/historia_clinica/buscar-pa/buscar-pa';
 import { HistoriaClinicaData } from '../providers/historiaClinica';
 import { HttpClientProvider } from '../providers/http-client/http-client';
 import {NativeStorage} from '@ionic-native/native-storage';
+import { File } from '@ionic-native/file';
+import { ElasticDirective } from '../directives/elastic/elastic';
+import { EmailComposer } from '@ionic-native/email-composer';
+import { EmailPage } from '../pages/email/email';
+import { AdjuntarPage } from '../pages/email/adjuntar/adjuntar';
+import { BrowserModule } from '@angular/platform-browser';
+
+
+
 
 
 @NgModule({
@@ -60,7 +69,9 @@ import {NativeStorage} from '@ionic-native/native-storage';
     SolValoracionPage,
     ViolenciaIntraPage,
     BuscarPaPage,
-    PopoverPage,
+    PopoverPage, EmailPage,
+    ElasticDirective,
+    AdjuntarPage,
     
   ],
   imports: [
@@ -96,6 +107,8 @@ import {NativeStorage} from '@ionic-native/native-storage';
     BuscarPacientePage,
     BuscarPaPage,
     PopoverPage,
+    EmailPage,
+    AdjuntarPage
   ],
   providers: [
     StatusBar,
@@ -103,7 +116,8 @@ import {NativeStorage} from '@ionic-native/native-storage';
     HistoriaClinicaData,    
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HttpClientProvider,
-    NativeStorage
+    NativeStorage,
+    EmailComposer,
   ]
 })
 export class AppModule {}

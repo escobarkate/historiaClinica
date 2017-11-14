@@ -121,21 +121,21 @@ export class HistoriaClinicaData {
   }
   loadDataFactPro() {
     this.dataFactProctectores = [
-      { nombre: "5 frut y verd /dia", solicitado: false },
-      { nombre: "Red.Ingesta Cal", solicitado: false },
+      { nombre: "5 frutas y verduras al dia", solicitado: false },
+      { nombre: "Reducción Ingesta Cal", solicitado: false },
       { nombre: "Consumo Alcohol", solicitado: false },
       { nombre: "Dieta Baja Grasa", solicitado: false },
       { nombre: "Act.Física (OMS)", solicitado: false },
       { nombre: "Consumo Tabaco", solicitado: false },
-      { nombre: "Manejo Estres", solicitado: false },
+      { nombre: "Manejo Estres y ansiedad", solicitado: false },
       { nombre: "Dieta Baja Sal", solicitado: false },
       { nombre: "Dieta Baja Azucar", solicitado: false },
       { nombre: "Control Peso", solicitado: false },
-      { nombre: "Com. IntraFamiliar", solicitado: false },
+      { nombre: "Comunicacion IntraFamiliar", solicitado: false },
       { nombre: "Auto-Examen Seno", solicitado: false },
       { nombre: "Auto-Examen Testiculo", solicitado: false },
       { nombre: "Cumplir citas", solicitado: false },
-      { nombre: "Realizacion Citolo.", solicitado: false },
+      { nombre: "Realizacion Citologia", solicitado: false },
     ]
   }
 

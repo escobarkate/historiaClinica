@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle="left">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Nuevo Mensaje
+    </ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="attach()"> 
+               <ion-icon name="attach"></ion-icon>
+            </button>
+      <button ion-button icon-only (click)="send()"> 
+               <ion-icon name="send"></ion-icon>
+            </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item class="bloque2">
+    <ion-input type="email" placeholder="Destinatario(s)" [(ngModel)]="to"></ion-input>
+  </ion-item>
+
+  <ion-item class="bloque2">
+    <ion-input type="text" placeholder="Asunto" [(ngModel)]="subject"></ion-input>
+  </ion-item>
+
+  <ion-item *ngIf="attachments!=[]" class="h2">
+    <h2>Adjuntos:</h2>
+    <h5 *ngFor="let a of nameAttach ; let i = index">{{a}}
+      <button ion-button icon-only clear color="danger" (click)="deletAttach(i)"> 
+                <ion-icon name="close"></ion-icon>
+              </button>
+    </h5>
+  </ion-item>
+
+  <ion-item class="bloque1">
+    <ion-textarea elastic type="text" placeholder="Escriba su mensaje..." [(ngModel)]="body"> </ion-textarea>
+  </ion-item>
+
+</ion-content>

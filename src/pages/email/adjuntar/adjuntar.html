@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-navbar color="ligth">
+    <ion-title>Archivos</ion-title>
+  </ion-navbar>
+  
+</ion-header>
+
+<ion-content>
+    
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-list>
+      <ion-item *ngFor="let item of items" (click)="initializeItems(item.path , item.name , item.icon)"> 
+      <ion-icon [name]="item.icon" item-start></ion-icon>
+          {{ item.name }}
+      </ion-item>
+    </ion-list>
+   
+</ion-content>

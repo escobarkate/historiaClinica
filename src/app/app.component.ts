@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import {Storage} from '@ionic/storage';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { MensajePage } from '../pages/mensaje/mensaje';
@@ -26,7 +26,7 @@ import { SolValoracionPage } from '../pages/historia_clinica/sol-valoracion/sol-
 import { ViolenciaIntraPage } from '../pages/historia_clinica/violencia-intra/violencia-intra';
 import { BuscarPacientePage,PopoverPage } from '../pages/historia_clinica/buscar-paciente/buscar-paciente';
 import { BuscarPaPage } from '../pages/historia_clinica/buscar-pa/buscar-pa';
-
+import { EmailPage } from '../pages/email/email';
 
 
 @Component({
@@ -52,7 +52,8 @@ export class MyApp {
       // { title: 'Mensaje', component: MensajePage },
       // { title: 'Historia', component: HistoriaPage },
       // { title: 'Buscar Paciente', component: BuscarPacientePage },
-      { title: 'Buscar Paciente', component: BuscarPaPage }
+      { title: 'Buscar Paciente', component: BuscarPaPage },
+      { title: 'Enviar mensaje', component: EmailPage }
     ];
 
     this.pagesHC = [

@@ -1,5 +1,5 @@
 <ion-header>
-   <ion-navbar color="primary">
+  <ion-navbar color="primary">
     <button ion-button menuToggle="left" start>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -12,14 +12,14 @@
       </button>
     </ion-buttons>
   </ion-navbar>
-  <ion-toolbar color="green" class="toolbar">
+  <ion-toolbar color="azul" class="toolbar">
     <ion-title>Riesgo Cardiovascular</ion-title>
-  </ion-toolbar> 
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-tabs #popsTabs>
-    <ion-tab [root]="tab1Root" [rootParams]="navParams.data" ></ion-tab>
+    <ion-tab [root]="tab1Root" [rootParams]="navParams.data"></ion-tab>
     <ion-tab [root]="tab2Root"></ion-tab>
     <ion-tab [root]="tab3Root"></ion-tab>
     <ion-tab [root]="tab4Root"></ion-tab>
@@ -34,9 +34,11 @@
     <ion-tab [root]="tab13Root"></ion-tab>
     <ion-tab [root]="tab14Root"></ion-tab>
     <ion-tab [root]="tab15Root"></ion-tab>
-    
   </ion-tabs>
-  
-
 </ion-content>
 
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button block color="primary" class="toolbar">Agregar</button>
+  </ion-toolbar>
+</ion-footer>

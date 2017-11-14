@@ -7,56 +7,58 @@
       Riesgo cardiovascular (RCV)
     </ion-title>
   </ion-navbar> -->
-</ion-header>
-
-<ion-content padding>
   <ion-toolbar class="toolbar">
     <ion-title>Reporte examenes</ion-title>
   </ion-toolbar>
- 
+</ion-header>
+
+<ion-content padding>
+
+
 
   <ion-item>
     <ion-label color="primary">Tipo</ion-label>
     <ion-select [(ngModel)]="report.tipo">
       <ion-option value="Hemograma">Hemograma</ion-option>
-      <ion-option value="Glise.Basal">Glisemia Basal</ion-option>
+      <ion-option value="Glisemia Basal">Glisemia Basal</ion-option>
       <ion-option value="Hemo.Glicosil">Hemoglobina Glicosilada</ion-option>
-      <ion-option value="Colest.Total">Colesterol Total</ion-option>
+      <ion-option value="Colesterol Total">Colesterol Total</ion-option>
       <ion-option value="Trigliceridos">Trigliceridos</ion-option>
       <ion-option value="HDL">HDL</ion-option>
       <ion-option value="LDL">LDL</ion-option>
-      <ion-option value="Par.Orina">Parcial de Orina</ion-option>
-      <ion-option value="Creat.Ser">Creatinina Serica</ion-option>
+      <ion-option value="Parcial deOrina">Parcial de Orina</ion-option>
+      <ion-option value="Creatinina Serica">Creatinina Serica</ion-option>
       <ion-option value="Microalbuliminuria">Microalbuliminuria</ion-option>
       <ion-option value="Electrocardiograma">Electrocardiograma</ion-option>
 
     </ion-select>
   </ion-item>
   <ion-item>
-    <ion-label color="primary">FECHA</ion-label>
-    <ion-input type="date" placeholder="Text Input" [(ngModel)]="report.fecha" ></ion-input>
+    <ion-label color="primary" fixed>FECHA</ion-label>
+    <ion-input type="date" [(ngModel)]="report.fecha"></ion-input>
   </ion-item>
-  
-  <ion-label color="primary">RESULTADO</ion-label>
-  <textarea rows="3" cols="35" [(ngModel)]="report.resultado" > </textarea>
 
-  <button ion-button block>Agregar</button>
-   
+
+  <ion-label color="primary">RESULTADO</ion-label>
+  <textarea rows="3" cols="35" [(ngModel)]="report.resultado"> </textarea>
+
+  <button ion-button block (click)="Agregar(report.tipo,report.fecha,report.resultado)">Agregar</button>
+
   <ion-list>
-     <ion-list-header class="toolbar">EXAMENES REGISTRADOS</ion-list-header>
-         <ion-item *ngFor="let c of items" >
+    <ion-list-header class="toolbar">EXAMENES REGISTRADOS</ion-list-header>
+    <ion-item *ngFor="let c of items">
       <ion-grid>
         <ion-row>
-          <ion-col width-50>
-            <p color="dark"> No. examen {{c.numero}}</p>
-            <p> Tipo :{{c.tipo}}</p>
-            <p> Fecha :{{c.fecha}}</p>
-            <p>Resultado: {{c.resultado}}</p>
+          <ion-col>
+          <p color="dark"> No. examen {{c.numero}}</p>
+          <p> Tipo :{{c.tipo}}</p>
+          <p> Fecha :{{c.fecha}}</p>
+          <p> Resultado: {{c.resultado}}</p>
           </ion-col>
         </ion-row>
       </ion-grid>
     </ion-item>
 
   </ion-list>
-   
+
 </ion-content>

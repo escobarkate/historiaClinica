@@ -44,15 +44,15 @@
       <ion-label>Tipo consulta</ion-label>
        <ion-select [(ngModel)]="prin.tipoConsul">       
         <ion-option value="Primera vez">Primera vez por medico</ion-option>
-        <ion-option value="Control por medico">Ctrl por med</ion-option>
-        <ion-option value="Control por enfermera">Ctrl por enf</ion-option>
+        <ion-option value="Control por medico">Control por medico</ion-option>
+        <ion-option value="Control por enfermera">Control por enfermera</ion-option>
         <ion-option value="Inasistencia">Inasistencia</ion-option>
       </ion-select>
     </ion-item>
     <ion-grid>
       <ion-row>
         <ion-col width-20>
-          <ion-label color="primary">Motivo de consulta:</ion-label>
+          <ion-label color="primary">Motivo de<br> consulta:</ion-label>
         </ion-col>
         <ion-col width-80>
           <textarea rows="4" cols="17" [(ngModel)]="prin.motivo" > </textarea>
@@ -60,7 +60,7 @@
       </ion-row>
       <ion-row>
         <ion-col width-20>
-          <ion-label color="primary">Enfermedad actual:</ion-label>
+          <ion-label color="primary">Enfermedad <br>actual:</ion-label>
         </ion-col>
         <ion-col width-80>
           <textarea rows="4" cols="17" [(ngModel)]="prin.enfActual" > </textarea>
