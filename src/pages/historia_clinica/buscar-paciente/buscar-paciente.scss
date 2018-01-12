@@ -5,6 +5,10 @@ page-buscar-paciente {
     }
     .toolbar{
     text-align: center;
-}
+    }
+    .no-scroll .scroll-content{
+        overflow: hidden;
+        overflow-y: auto;
+    }
 
 }

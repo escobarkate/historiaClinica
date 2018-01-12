@@ -1,4 +1,4 @@
-import { Component,ViewChild,ElementRef  } from '@angular/core';
+import { Component,ViewChild  } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { Tabs, NavController, NavParams ,ToastController,PopoverController } from 'ionic-angular';
 import { HistoriaPage } from '../datos-principales/historia';
@@ -8,7 +8,7 @@ import { AntPersonalesPage } from '../ant-personales/ant-personales';
 import { DiagnosticoPage } from '../diagnostico/diagnostico';
 import { ExamFisicoPage } from '../exam-fisico/exam-fisico';
 import { FactProtectoresPage } from '../fact-protectores/fact-protectores';
-import { IdRiesgosPage } from '../identificacion-riesgos/identificacion-riesgos';
+//import { IdRiesgosPage } from '../identificacion-riesgos/identificacion-riesgos';
 import { MoriskyPage } from '../morisky/morisky';
 import { NoFarmaPage } from '../no-farma/no-farma';
 import { ObservacionesPage } from '../observaciones/observaciones';
@@ -17,7 +17,7 @@ import { ReporteExamenesPage } from '../reporte-examenes/reporte-examenes';
 import { RevisionSistemasPage } from '../revision-sistemas/revision-sistemas';
 import { SolValoracionPage } from '../sol-valoracion/sol-valoracion';
 import { ViolenciaIntraPage } from '../violencia-intra/violencia-intra';
-import { BuscarPaPage } from '../buscar-pa/buscar-pa';
+
 import { Paciente } from '../../../models/paciente';
 import { historiaClinica } from '../../../models/historiaClinica';
 import { HttpClientProvider } from '../../../providers/http-client/http-client';

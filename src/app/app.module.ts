@@ -32,13 +32,15 @@ import { BuscarPaPage } from '../pages/historia_clinica/buscar-pa/buscar-pa';
 import { HistoriaClinicaData } from '../providers/historiaClinica';
 import { HttpClientProvider } from '../providers/http-client/http-client';
 import {NativeStorage} from '@ionic-native/native-storage';
-import { File } from '@ionic-native/file';
+//import { File } from '@ionic-native/file';
 import { ElasticDirective } from '../directives/elastic/elastic';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { EmailPage } from '../pages/email/email';
 import { AdjuntarPage } from '../pages/email/adjuntar/adjuntar';
 import { BrowserModule } from '@angular/platform-browser';
 
+//Tabs
+//import { SuperTabsModule } from 'ionic2-super-tabs@1.1.1';
 
 
 
@@ -78,6 +80,7 @@ import { BrowserModule } from '@angular/platform-browser';
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
+    //SuperTabsModule,
     IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
