@@ -15,7 +15,7 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 ion-icon {
-    &[class*="appname-"] {
+    &[class*="app-"] {
         // Instead of using the font-based icons
         // We're applying SVG masks
         mask-size: contain;
@@ -26,10 +26,10 @@ ion-icon {
         height: 1em;
     }
     // custom icons
-    &[class*="icon1"] {
-        mask-image: url(../assets/imgs/1.svg);
+    &[class*="app-icon1"] {
+        mask-image: url(../assets/imgs/logo.png);
     }
-    &[class*="icon2"] {
+    &[class*="app-icon2"] {
         mask-image: url(../assets/imgs/2.svg);
     }
     

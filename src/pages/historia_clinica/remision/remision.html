@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <button ion-button menuToggle="left" start>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+       HISTORIA CLINICA
+      </ion-title>
+    </ion-navbar>
+    <ion-toolbar class="toolbar">
+        <ion-title>HC Remision/ Interconsulta</ion-title>
+      </ion-toolbar>
+  </ion-header>
+
+<ion-content padding>
+    
+    <ion-label color="primary">DATOS DE LA CONSULTA</ion-label>
+     
+         
+          <ion-item>
+              <ion-label >Tipo de consulta</ion-label>
+              <ion-select [(ngModel)]="remi.tipoconsul" >
+                <ion-option value="Historia de remision">Historia de remision</ion-option>
+                <ion-option value="Interconsulta">Interconsulta</ion-option>
+              </ion-select>
+          </ion-item>
+      
+      <ion-label color="primary">DATOS DE LA CONSULTA</ion-label>
+      <ion-list>
+          <ion-item>
+              <ion-label  floating>Nombre</ion-label>
+              <ion-input [(ngModel)]="remi.nombrestab" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label  floating>Municipio</ion-label>
+              <ion-input [(ngModel)]="remi.lugarestab"></ion-input>
+            </ion-item>
+      </ion-list>
+      <ion-label color="primary">RESUMEN DE LA HISTORIA</ion-label>
+      <textarea rows="3" cols="35" [(ngModel)]="remi.resumen"> </textarea>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button block color="primary" class="toolbar">Agregar</button>
+  </ion-toolbar>
+</ion-footer>

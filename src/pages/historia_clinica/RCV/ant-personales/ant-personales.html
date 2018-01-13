@@ -1,0 +1,27 @@
+<ion-header>
+  <!-- <ion-navbar color="primary">
+    <button ion-button menuToggle="left" start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar> -->
+  <ion-toolbar color="azul" class="toolbar">
+    <ion-title><h6> Antecedentes Personales</h6></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  
+  
+  <ion-grid>
+    <ion-row *ngFor="let p of per">
+      <ion-col >
+        <ion-label color="primary"> {{p.nombreant}} </ion-label>
+        <ion-toggle [(ngModel)]="p.antecedente"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <textarea rows="4" cols="19" [(ngModel)]="p.observacion"> </textarea>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

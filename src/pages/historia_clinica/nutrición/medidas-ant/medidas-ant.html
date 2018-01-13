@@ -1,0 +1,42 @@
+
+<ion-header>
+
+    <ion-toolbar color="azul" class="toolbar">
+        <ion-title><h6>Medidas Antropométricas</h6></ion-title>
+      </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <!-- <ion-list-header>Información del acudiente</ion-list-header> -->
+    
+        <ion-item>
+          <ion-label >Peso (Kg):</ion-label>
+          <ion-input type="number" placeholder="" [(ngModel)]="antro.peso" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label >Talla (Mts):</ion-label>
+          <ion-input type="number" placeholder="" [(ngModel)]="antro.tallao" ></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label >IMC (Auto):</ion-label>
+            <ion-input type="number" placeholder="" [(ngModel)]="antro.imc" ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label >Clasificación IMC <br> (Automático):</ion-label>
+            <ion-input placeholder="" [(ngModel)]="antro.clasimc" ></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label >Perímetro abdominal:</ion-label>
+              <ion-input type="number" placeholder="" [(ngModel)]="antro.perimetro" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label >Clasificacion perímetro <br> (Automático):</ion-label>
+              <ion-input placeholder="" [(ngModel)]="antro.clasiabdo" ></ion-input>
+            </ion-item>
+        
+      </ion-list>
+
+</ion-content>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { BuscarPacientePage } from '..//buscar-paciente/buscar-paciente';
+//import { BuscarPacientePage } from '..//buscar-paciente/buscar-paciente';
+import { tipoHistoriaPage } from '..//tipo-historia/tipo-historia';
 import { Paciente } from '../../../models/paciente';
 import { HttpClientProvider } from '../../../providers/http-client/http-client';
 
@@ -67,7 +68,7 @@ export class BuscarPaPage {
 
   goToDatosP(ced:string) {
     
-    this.navCtrl.push(BuscarPacientePage, { id: ced });
+    this.navCtrl.push(tipoHistoriaPage, { id: ced });
   
   }
   

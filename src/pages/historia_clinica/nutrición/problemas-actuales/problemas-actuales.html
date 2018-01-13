@@ -1,0 +1,23 @@
+
+<ion-header>
+
+    <ion-toolbar color="azul" class="toolbar">
+        <ion-title><h6>Problemas Actuales</h6></ion-title>
+      </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content >
+    <ion-grid >      
+        <ion-row *ngFor="let f of prob" >
+          <ion-col >               
+            <ion-label  color="primary"> {{f.nombreant}} </ion-label>   
+            <ion-toggle  [(ngModel)]="f.antecedente"></ion-toggle>
+          </ion-col>
+          <ion-col  >       
+            <textarea rows="4" cols="17" [(ngModel)]="f.observacion"> </textarea>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+</ion-content>

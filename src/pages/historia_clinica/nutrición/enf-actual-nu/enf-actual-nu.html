@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="azul" class="toolbar">
+    <ion-title>
+      <h6> Motivo Consulta</h6>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item>
+        <ion-label >Tipo Consulta</ion-label>
+         <ion-select [(ngModel)]="act.tipos">       
+          <ion-option value="Primera vez">Primera vez nutricionista </ion-option>
+          <ion-option value="Control nutricionista">Control nutricionista</ion-option>
+          <ion-option value="Inasistencia">Inasistencia</ion-option>
+        </ion-select>
+      </ion-item>
+  
+  <ion-label color="primary">Motivo</ion-label>
+  <textarea rows="4" cols="35" [(ngModel)]="act.motivo"> </textarea>
+  <ion-label color="primary">Enfermedad Actual</ion-label>
+  <textarea rows="4" cols="35" [(ngModel)]="act.enfermedad"> </textarea>
+  <ion-list>
+    <ion-item *ngFor="let f of act1">
+      <ion-label>{{f.nombre}} </ion-label>
+      <ion-select [(ngModel)]="f.antecedente">
+        <ion-option value="Normal">Normal </ion-option>
+        <ion-option value="Regular">Regular</ion-option>
+        <ion-option value="Anormal">Anormal</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <div *ngFor="let f of act2">
+      <ion-label color="primary">{{f.nombre}}</ion-label>
+      <textarea rows="2" cols="35" [(ngModel)]="f.antecedente"> </textarea>
+  </div>
+  
+  <ion-list>
+    <ion-item *ngFor="let f of act3">
+      <ion-label>{{f.nombre}}</ion-label>
+      <ion-input placeholder="" [(ngModel)]="f.antecedente"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Actividad fisica</ion-label>
+      <ion-select [(ngModel)]="act.actividadf">
+        <ion-option value="Normal">Muy ligera </ion-option>
+        <ion-option value="Regular">Ligera</ion-option>
+        <ion-option value="Anormal">Moderada</ion-option>
+        <ion-option value="Regular">Pesada</ion-option>
+        <ion-option value="Anormal">Excepcional</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item *ngFor="let f of act4">
+      <ion-label>{{f.nombre}}</ion-label>
+      <ion-input placeholder="" [(ngModel)]="f.antecedente"></ion-input>
+    </ion-item>
+    
+    <ion-item *ngFor="let f of act5" >
+      <ion-label>{{f.nombre}}</ion-label>
+      <ion-select [(ngModel)]="f.antecedente">
+        <ion-option value="Normal">Niega </ion-option>
+        <ion-option value="Regular">Ocasionalmente</ion-option>
+        <ion-option value="Anormal">Si</ion-option>
+
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

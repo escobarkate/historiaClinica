@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="azul"  class="toolbar">
+    <ion-title><h6> Motivo de consulta</h6></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  
+    <ion-item>
+      <ion-label color="primary">Tipo Consulta</ion-label>
+
+       <ion-select [(ngModel)]="consul.tipos">       
+        <ion-option value="Primera vez">Primera vez nutricionista </ion-option>
+        <ion-option value="Control nutricionista">Control nutricionista</ion-option>
+        <ion-option value="Inasistencia">Inasistencia</ion-option>
+      </ion-select>
+    </ion-item>
+
+  <ion-label color="primary">Motivo</ion-label>
+  <textarea rows="4" cols="35" [(ngModel)]="consul.motivo"> </textarea>
+</ion-content>

@@ -5,29 +5,34 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //import {Storage} from '@ionic/storage';
 //import { HomePage } from '../pages/home/home';
 //import { ListPage } from '../pages/list/list';
+
+//RCV
 import { MensajePage } from '../pages/mensaje/mensaje';
-import { HistoriaPage } from '../pages/historia_clinica/datos-principales/historia';
-import { AntFamiliaresPage } from '../pages/historia_clinica/ant-familiares/ant-familiares';
-import { AntFarmacologicosPage } from '../pages/historia_clinica/ant-farmacologicos/ant-farmacologicos';
-import { AntGinecoPage } from '../pages/historia_clinica/ant-gineco/ant-gineco';
-import { AntPersonalesPage } from '../pages/historia_clinica/ant-personales/ant-personales';
-import { DiagnosticoPage } from '../pages/historia_clinica/diagnostico/diagnostico';
-import { ExamFisicoPage } from '../pages/historia_clinica/exam-fisico/exam-fisico';
-import { FactProtectoresPage } from '../pages/historia_clinica/fact-protectores/fact-protectores';
-import { IdRiesgosPage } from '../pages/historia_clinica/identificacion-riesgos/identificacion-riesgos';
-import { MoriskyPage } from '../pages/historia_clinica/morisky/morisky';
-import { NoFarmaPage } from '../pages/historia_clinica/no-farma/no-farma';
-import { ObservacionesPage } from '../pages/historia_clinica/observaciones/observaciones';
-import { ParaclinicosPage } from '../pages/historia_clinica/paraclinicos/paraclinicos';
-import { ReporteExamenesPage } from '../pages/historia_clinica/reporte-examenes/reporte-examenes';
-import { RevisionSistemasPage } from '../pages/historia_clinica/revision-sistemas/revision-sistemas';
-import { SignosVitalesPage } from '../pages/historia_clinica/signos-vitales/signos-vitales';
-import { SolValoracionPage } from '../pages/historia_clinica/sol-valoracion/sol-valoracion';
-import { ViolenciaIntraPage } from '../pages/historia_clinica/violencia-intra/violencia-intra';
-import { BuscarPacientePage,PopoverPage } from '../pages/historia_clinica/buscar-paciente/buscar-paciente';
+import { HistoriaPage } from '../pages/historia_clinica/RCV/datos-principales/historia';
+import { AntFamiliaresPage } from '../pages/historia_clinica/RCV/ant-familiares/ant-familiares';
+import { AntFarmacologicosPage } from '../pages/historia_clinica/RCV/ant-farmacologicos/ant-farmacologicos';
+import { AntGinecoPage } from '../pages/historia_clinica/RCV/ant-gineco/ant-gineco';
+import { AntPersonalesPage } from '../pages/historia_clinica/RCV/ant-personales/ant-personales';
+import { DiagnosticoPage } from '../pages/historia_clinica/RCV/diagnostico/diagnostico';
+import { ExamFisicoPage } from '../pages/historia_clinica/RCV/exam-fisico/exam-fisico';
+import { FactProtectoresPage } from '../pages/historia_clinica/RCV/fact-protectores/fact-protectores';
+import { IdRiesgosPage } from '../pages/historia_clinica/RCV/identificacion-riesgos/identificacion-riesgos';
+import { MoriskyPage } from '../pages/historia_clinica/RCV/morisky/morisky';
+import { NoFarmaPage } from '../pages/historia_clinica/RCV/no-farma/no-farma';
+import { ObservacionesPage } from '../pages/historia_clinica/RCV/observaciones/observaciones';
+import { ParaclinicosPage } from '../pages/historia_clinica/RCV/paraclinicos/paraclinicos';
+import { ReporteExamenesPage } from '../pages/historia_clinica/RCV/reporte-examenes/reporte-examenes';
+import { RevisionSistemasPage } from '../pages/historia_clinica/RCV/revision-sistemas/revision-sistemas';
+import { SignosVitalesPage } from '../pages/historia_clinica/RCV/signos-vitales/signos-vitales';
+import { SolValoracionPage } from '../pages/historia_clinica/RCV/sol-valoracion/sol-valoracion';
+import { ViolenciaIntraPage } from '../pages/historia_clinica/RCV/violencia-intra/violencia-intra';
+import { BuscarPacientePage,PopoverPage } from '../pages/historia_clinica/RCV/buscar-paciente/buscar-paciente';
 import { BuscarPaPage } from '../pages/historia_clinica/buscar-pa/buscar-pa';
 import { EmailPage } from '../pages/email/email';
 
+
+//BUSCAR HISTORIA
+import {tipoHistoriaPage } from '../pages/historia_clinica/tipo-historia/tipo-historia';
 
 @Component({
   templateUrl: 'app.html'
@@ -53,7 +58,8 @@ export class MyApp {
       // { title: 'Historia', component: HistoriaPage },
       // { title: 'Buscar Paciente', component: BuscarPacientePage },
       { title: 'Buscar Paciente', component: BuscarPaPage },
-      { title: 'Enviar mensaje', component: EmailPage }
+      { title: 'Enviar mensaje', component: EmailPage },
+      { title: 'Tipo Historia', component: tipoHistoriaPage },
     ];
 
     this.pagesHC = [

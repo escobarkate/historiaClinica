@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar  color="azul" class="toolbar">
+    <ion-title><h6> Antecedentes familiares</h6></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+  
+  <ion-grid >      
+    <ion-row *ngFor="let f of fam" >
+      <ion-col >               
+        <ion-label  color="primary"> {{f.nombreant}} </ion-label>   
+        <ion-toggle  [(ngModel)]="f.antecedente"></ion-toggle>
+      </ion-col>
+      <ion-col  >       
+        <textarea rows="4" cols="19" [(ngModel)]="f.observacion"> </textarea>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-header>
+  <!-- <ion-navbar color="primary">
+    <button ion-button menuToggle="left" start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar> -->
+  <ion-toolbar color="azul" class="toolbar">
+    <ion-title><h6>Violencia intrafamiliar</h6></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  
+  
+  
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Se siente bien con su familia?</ion-label>
+      <ion-toggle [(ngModel)]="vio.familiabien"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Cuándo tiene problemas es <br>apoyado por su familia?</ion-label>
+      <ion-toggle [(ngModel)]="vio.apoyofamilia" ></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Existen expresiones de afecto <br>y cariño</ion-label>
+      <ion-toggle [(ngModel)]="vio.afecto" ></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Se siente rechazado por alguien<br>de su familia?</ion-label>
+      <ion-toggle [(ngModel)]="vio.rechazado" ></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ha sido agredido fisicamente por <br>algun familiar?</ion-label>
+      <ion-toggle [(ngModel)]="vio.agredido" disabled="false"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ha tenido ideas o pensamientos<br>suicidas?</ion-label>
+      <ion-toggle [(ngModel)]="vio.suicida" disabled="false"></ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>

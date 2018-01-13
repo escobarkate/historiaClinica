@@ -10,6 +10,13 @@ export class HistoriaClinicaData {
   dataExmFisico: DatFamiliares[];
   dataParaclinicos: DatParaclinico[];
   dataFactProctectores: DatParaclinico[];
+  dataProbleActuales: DatFamiliares[];
+  dataAntGineco:DatGineco[];
+  dataEnfAct1:DatGineco[];
+  dataEnfAct2:DatGineco[];
+  dataEnfAct3:DatGineco[];
+  dataEnfAct4:DatGineco[];
+  dataEnfAct5:DatGineco[];
 
   constructor() {
     this.loadDataAntFam();
@@ -18,6 +25,9 @@ export class HistoriaClinicaData {
     this.loadDataExmFis();
     this.loadDataParacl();
     this.loadDataFactPro();
+    this.loadDataProbleAct();
+    this.loadDataAntGineco();
+    this.loadDataEnfAct1();
   }
 
   loadDataAntFam() {
@@ -37,6 +47,8 @@ export class HistoriaClinicaData {
       { nombreant: "GO y CERVIX", antecedente: false, observacion: "" },
     ];
   }
+
+
   loadDataAntPer() {
     this.dataPersonales = [
       { nombreant: "HTA", antecedente: false, observacion: "" },
@@ -101,6 +113,27 @@ export class HistoriaClinicaData {
       { nombreant: "PIEL", antecedente: false, observacion: "" },
     ]
   }
+  loadDataProbleAct() {
+    this.dataProbleActuales = [
+      { nombreant: "DIARREA", antecedente: false, observacion: "" },
+      { nombreant: "ESTREÑIMIENTO", antecedente: false, observacion: "" },
+      { nombreant: "GASTRITIS", antecedente: false, observacion: "" },
+      { nombreant: "ULCERA", antecedente: false, observacion: "" },
+      { nombreant: "NAUSEAS", antecedente: false, observacion: "" },
+      { nombreant: "PIROSIS", antecedente: false, observacion: "" },
+      { nombreant: "VOMITO", antecedente: false, observacion: "" },
+      { nombreant: "COLITIS", antecedente: false, observacion: "" },
+      { nombreant: "DENTADURA", antecedente: false, observacion: "" },
+      { nombreant: "OTROS", antecedente: false, observacion: "" },
+      { nombreant: "DIAGNÓSTICO ENF", antecedente: false, observacion: "" },
+      { nombreant: "ENF. IMPORTANTE", antecedente: false, observacion: "" },
+      { nombreant: "MEDICAMENTOS", antecedente: false, observacion: "" },
+      { nombreant: "LAXANTES", antecedente: false, observacion: "" },
+      { nombreant: "DIURÉTICOS", antecedente: false, observacion: "" },
+      { nombreant: "ANTIÁCIDOS", antecedente: false, observacion: "" },
+      { nombreant: "ANALGESICOS", antecedente: false, observacion: "" },
+    ]
+  }
 
   loadDataParacl() {
     this.dataParaclinicos = [
@@ -138,6 +171,64 @@ export class HistoriaClinicaData {
       { nombre: "Realizacion Citologia", solicitado: false },
     ]
   }
+  loadDataAntGineco() {
+    this.dataAntGineco = [
+      { nombre: "Menarquia:",antecedente:""},
+      { nombre: "FUM:",antecedente:""},
+      { nombre: "Menopausia:",antecedente:""},
+      { nombre: "G:",antecedente:""},
+      { nombre: "P:",antecedente:""},
+      { nombre: "A:",antecedente:""},
+      { nombre: "C:",antecedente:""},
+      { nombre: "Planificación familiar:",antecedente:"",},
+      { nombre: "Método:",antecedente:""},
+      { nombre: "Tiempo:",antecedente:""},
+
+      
+    ]
+  }
+
+  //Enfermedad actual partes:
+  loadDataEnfAct1() {
+    this.dataEnfAct1 = [
+      { nombre: "Apetito:",antecedente:""},
+      { nombre: "Habito intestinal",antecedente:""},
+      { nombre: "Deglución",antecedente:""},
+      { nombre: "Masticación:",antecedente:""},
+    ]
+    this.dataEnfAct2 = [
+      { nombre: "INTOLERANCIAS/ALERGIAS:",antecedente:""},
+      { nombre: "SINTOMAS GASTROINTESTINALES",antecedente:""},
+      { nombre: "ALIMENTOS FAVORITOS:",antecedente:""},
+      { nombre: "ALIMENTOS RECHAZADOS:",antecedente:""},
+      { nombre: "CONSUMO GRASAS SATURADAS:",antecedente:""},
+      { nombre: "SUPLEMENTO NUTRICIONAL:",antecedente:""},
+    ]
+    this.dataEnfAct3 = [
+      { nombre: "Comidas al dia:",antecedente:""},
+      { nombre: "Porciones de fruta/día:",antecedente:""},
+      { nombre: "Porciones de verdura/día::",antecedente:""},
+      { nombre: "Vasos de agua/día:",antecedente:""},
+    ]
+    this.dataEnfAct4 = [
+      { nombre: "Tipo:",antecedente:""},
+      { nombre: "Frecuencia:",antecedente:""},
+      { nombre: "Horas:",antecedente:""},
+      { nombre: "Minutos:",antecedente:""},
+      { nombre: "Clasificación",antecedente:""},
+    ]
+    this.dataEnfAct5 = [
+      { nombre: "Alcohol:",antecedente:""},
+      { nombre: "Cigarrillos:",antecedente:""},
+      { nombre: "Café:",antecedente:""},
+    ]
+   
+
+
+
+
+  }
+
 
 }
 
@@ -145,6 +236,12 @@ export class DatFamiliares {
   nombreant: string;
   antecedente: boolean;
   observacion: string;
+}
+
+export class DatGineco {
+  nombre: string;
+  antecedente: string;
+  
 }
 
 export class DatParaclinico {

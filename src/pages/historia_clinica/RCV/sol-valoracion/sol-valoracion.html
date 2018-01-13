@@ -1,0 +1,59 @@
+<ion-header>
+<ion-toolbar color="azul" class="toolbar">
+    <ion-title><h6>Solicitud de valoracion<br> por especialistas </h6> </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  
+ 
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Medicina interna:</ion-label>
+      <ion-toggle [(ngModel)]="solVal.medicinainterna"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Cardiologia</ion-label>
+      <ion-toggle [(ngModel)]="solVal.cardiologia"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Endocrinologia:</ion-label>
+      <ion-toggle [(ngModel)]="solVal.endocrinologia"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Oftamología:</ion-label>
+      <ion-toggle [(ngModel)]="solVal.oftamologia"></ion-toggle>
+    </ion-item>
+  </ion-list>
+  <ion-label color="primary">OBSERVACIONES:</ion-label>
+  <textarea rows="4" cols="35" [(ngModel)] ="solVal.observaciones"> </textarea>
+  <ion-label color="primary">OTROS:</ion-label>
+  <textarea rows="4" cols="35" [(ngModel)]="solVal.otros" > </textarea>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">CITA DE CONTROL</ion-label>
+      <ion-select [(ngModel)]="solVal.citacontrol">
+        <ion-option value="15">15 días</ion-option>
+        <ion-option value="30">30 días</ion-option>
+        <ion-option value="60">60 días</ion-option>
+        <ion-option value="90">90 días</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">MEDICO CITA<BR>DE CONTROL</ion-label>
+      <ion-select [(ngModel)]="solVal.medicoControl">
+        <ion-option value="15">15 días</ion-option>
+        <ion-option value="30">30 días</ion-option>
+        <ion-option value="60">60 días</ion-option>
+        <ion-option value="90">90 días</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">ESPECIALIDAD</ion-label>
+      <ion-input placeholder="Especialidad..." [(ngModel)]="solVal.especialidad" ></ion-input>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

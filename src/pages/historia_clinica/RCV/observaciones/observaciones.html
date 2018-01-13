@@ -1,0 +1,26 @@
+<ion-header>
+  <!-- <ion-navbar color="primary">
+    <button ion-button menuToggle="left" start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Riesgo cardiovascular (RCV)
+    </ion-title> 
+  </ion-navbar>-->
+  <ion-toolbar color="azul" class="toolbar">
+    <ion-title><h6>Observaciones y Hallazgos</h6></ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-label color="primary">OBSERVACIONES/HALLAZGOS</ion-label>
+  <textarea rows="4" cols="35" [(ngModel)]="Obs.observaciones"> </textarea>
+  <ion-label color="primary">REMISION</ion-label>
+  <textarea rows="4" cols="35" [(ngModel)]="Obs.remision"> </textarea>
+  <ion-label color="primary">ANÁLISIS Y PLAN</ion-label>
+  <textarea rows="4" cols="35" [(ngModel)]="Obs.analisis"> </textarea>
+
+</ion-content>

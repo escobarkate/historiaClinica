@@ -1,0 +1,76 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  <ion-toolbar color="green" class="toolbar">
+    <ion-title>Datos principales</ion-title>
+    <ion-list class="toolbar2">
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img src="https://cdn1.pri.org/sites/default/files/person-image/980830_10205947467221382_1198269611400880613_o.jpg">
+        </ion-thumbnail>
+
+        <h3 color="dark">Información basica</h3>
+        <p><b>Nombre</b> : {{paciente.nombre}} </p>
+        <p><b>C.C</b> : {{paciente.cedula}} </p>
+        <p><b>Edad:</b> {{paciente.edad}} </p>
+        <p><b>Genero:</b> {{paciente.genero}} </p>
+        <p><b>Adm:</b> {{paciente.administracion}} </p>
+      </ion-item>
+    </ion-list>
+
+  
+  </ion-toolbar>
+  <ion-list>
+    <ion-list-header>Información del acudiente</ion-list-header>
+
+    <ion-item>
+      <ion-label >Nombre</ion-label>
+      <ion-input placeholder="" [(ngModel)]="prin.nombreAcu" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label >Parentesco</ion-label>
+      <ion-input placeholder="" [(ngModel)]="prin.parentesco" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Telefono</ion-label>
+      <ion-input type="tel" placeholder="" [(ngModel)]="prin.telefono" ></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>Motivo de consulta</ion-list-header>
+    <ion-item>
+      <ion-label>Tipo consulta</ion-label>
+       <ion-select [(ngModel)]="prin.tipoConsul">       
+        <ion-option value="Primera vez">Primera vez por medico</ion-option>
+        <ion-option value="Control por medico">Control por medico</ion-option>
+        <ion-option value="Control por enfermera">Control por enfermera</ion-option>
+        <ion-option value="Inasistencia">Inasistencia</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col width-20>
+          <ion-label color="primary">Motivo de<br> consulta:</ion-label>
+        </ion-col>
+        <ion-col width-80>
+          <textarea rows="4" cols="17" [(ngModel)]="prin.motivo" > </textarea>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-20>
+          <ion-label color="primary">Enfermedad <br>actual:</ion-label>
+        </ion-col>
+        <ion-col width-80>
+          <textarea rows="4" cols="17" [(ngModel)]="prin.enfActual" > </textarea>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+
+
+
+
+
+</ion-content>
