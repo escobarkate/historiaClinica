@@ -1,49 +1,52 @@
 <ion-header>
-  <ion-toolbar color="azul"  class="toolbar">
-    <ion-title><h6> Análisis y  Conducta</h6></ion-title>
+  <ion-toolbar color="azul" class="toolbar">
+    <ion-title>
+      <h6> Análisis y Conducta</h6>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-    
-      <textarea rows="3" cols="35" [(ngModel)]="ana.analisis"> </textarea>
-      <ion-item>
-          <ion-label color="primary">Conducta</ion-label>
-          <ion-select [(ngModel)]="ana.conducta" >
-            <ion-option value="Historia de remision">Historia de remision</ion-option>
-            <ion-option value="Interconsulta">Interconsulta</ion-option>
-          </ion-select>
-      </ion-item>
-      <ion-label color="primary">Recomendaciones</ion-label>
-      <textarea rows="3" cols="35" [(ngModel)]="ana.recomendaciones"> </textarea>
-      <ion-list>
-          <ion-list-header color="primary">Ordenes</ion-list-header>
-          <ion-item>
-              <ion-label>Prioritaria</ion-label>
-              <ion-toggle [(ngModel)]="ana.prioritaria"></ion-toggle>
-            </ion-item>
-            <ion-item>
-               <ion-label>Orden de cirugia</ion-label>
-              <ion-toggle [(ngModel)]="ana.ordencx"></ion-toggle>
-            </ion-item>
-            <ion-item>
-              <ion-label>Orden de medicamentos</ion-label>
-              <ion-toggle [(ngModel)]="ana.ordenmed"></ion-toggle>
-            </ion-item>
-            <ion-item>
-              <ion-label>Ordenes médicas</ion-label>
-              <ion-toggle [(ngModel)]="ana.ordenmedica"></ion-toggle>
-            </ion-item>
-            <ion-item>
-                <ion-label>Solicitud de<br>insumos</ion-label>
-                <ion-toggle [(ngModel)]="ana.solinsumos"></ion-toggle>
-              </ion-item>
-      </ion-list>
+
+  <textarea rows="3" cols="35" [(ngModel)]="ana.analisis"> </textarea>
+  <ion-item>
+    <ion-label color="primary">Conducta</ion-label>
+    <ion-select [(ngModel)]="ana.conducta">
+      <ion-option value="Historia de remision">Historia de remision</ion-option>
+      <ion-option value="Interconsulta">Interconsulta</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-label color="primary">Recomendaciones</ion-label>
+  <textarea rows="3" cols="35" [(ngModel)]="ana.recomendaciones"> </textarea>
+  <ion-list>
+    <ion-list-header color="primary">Ordenes</ion-list-header>
+    <ion-item>
+      <ion-label>Prioritaria</ion-label>
+      <ion-toggle [(ngModel)]="ana.prioritaria"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Orden de cirugia</ion-label>
+      <ion-toggle [(ngModel)]="ana.ordencx"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Orden de medicamentos</ion-label>
+      <ion-toggle [(ngModel)]="ana.ordenmed"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ordenes médicas</ion-label>
+      <ion-toggle [(ngModel)]="ana.ordenmedica"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Solicitud de
+        <br>insumos</ion-label>
+      <ion-toggle [(ngModel)]="ana.solinsumos"></ion-toggle>
+    </ion-item>
+  </ion-list>
 
 
-    
-          
-     
 
-    
+
+
+
+
 </ion-content>

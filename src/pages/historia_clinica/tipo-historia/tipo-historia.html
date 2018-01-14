@@ -1,18 +1,45 @@
 <ion-header>
-    <ion-navbar color="primary">
-      <button ion-button menuToggle="left">
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title><h6>BUSCAR HISTORIA</h6></ion-title>
-    </ion-navbar>
-  </ion-header>
-  
-  
-  <ion-content padding>
-    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-    <ion-list>
-     <ion-item *ngFor="let item of items; let i=index" (click)="goTo(i)">
-       <h3>{{item}}</h3>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle="left">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <h6>BUSCAR HISTORIA</h6>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-toolbar color="green" class="toolbar">
+    <ion-list class="toolbar2">
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img src="https://cdn1.pri.org/sites/default/files/person-image/980830_10205947467221382_1198269611400880613_o.jpg">
+        </ion-thumbnail>
+
+        <h3 color="dark">    Datos principales</h3>
+        <p>
+          <b>Nombre</b> : {{paciente.nombre}} </p>
+        <p>
+          <b>C.C</b> : {{paciente.cedula}} </p>
+        <p>
+          <b>Edad:</b> {{paciente.edad}} </p>
+        <p>
+          <b>Genero:</b> {{paciente.genero}} </p>
+        <p>
+          <b>Adm:</b> {{paciente.administracion}} </p>
       </ion-item>
     </ion-list>
-    </ion-content>
+
+  </ion-toolbar>
+  <ion-label class="toolbar" color="primary">TIPO DE HISTORIA:</ion-label>
+  <rb color="gris">    Indique tipo de historia a consultar.</rb>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list>
+      
+    <ion-item *ngFor="let item of items; let i=index" (click)="goTo(i)">
+      <h3>{{item}}</h3>
+    </ion-item>
+  </ion-list>
+</ion-content>

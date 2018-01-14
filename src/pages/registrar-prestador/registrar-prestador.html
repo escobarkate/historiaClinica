@@ -1,0 +1,155 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle="left" start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Prestadores
+    </ion-title>
+  </ion-navbar>
+  <ion-toolbar color="azul" class="toolbar">
+    <ion-title>Registrar prestador</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label >Tipo usuario:</ion-label>
+    <ion-select [(ngModel)]="medico.tipo_usuario">
+      <ion-option value="Usuario">Usuario</ion-option>
+      <ion-option value="Prestador">Prestador</ion-option>
+      <ion-option value="Administrador">Administrador</ion-option>
+
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label  fixed>Identificación</ion-label>
+    <ion-input type="number" [(ngModel)]="medico.identificacion"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label >Tipo identificación:</ion-label>
+    <ion-select [(ngModel)]="medico.tipo_identificacion">
+      <ion-option value="CC">CC</ion-option>
+      <ion-option value="CE">CE</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label  >Login Usuario</ion-label>
+    <ion-input [(ngModel)]="medico.login_usuario"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Estado cuenta</ion-label>
+    <ion-toggle [(ngModel)]="medico.estado_cuenta"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label  fixed>Perfil</ion-label>
+    <ion-input [(ngModel)]="medico.perfil"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label >Observacion</ion-label>
+    <ion-input [(ngModel)]="medico.observacion"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label  >Primer nombre</ion-label>
+    <ion-input [(ngModel)]="medico.primer_nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label  >Segundo nombre</ion-label>
+    <ion-input [(ngModel)]="medico.segundo_nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label  >Primer apellido</ion-label>
+    <ion-input [(ngModel)]="medico.primer_apellido"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label  >Segundo apellido</ion-label>
+    <ion-input [(ngModel)]="medico.segundo_apellido"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label  >Dirección</ion-label>
+    <ion-input [(ngModel)]="medico.direccion"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label  >Telefono residencia</ion-label>
+    <ion-input type="number" [(ngModel)]="medico.telefono_residencia"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label  >Telefono oficina</ion-label>
+    <ion-input type="number" [(ngModel)]="medico.telefono_oficina"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label  >Celular</ion-label>
+    <ion-input type="number" [(ngModel)]="medico.celular"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label  >Email</ion-label>
+    <ion-input type="email" [(ngModel)]="medico.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating >Cargo actual</ion-label>
+    <ion-input [(ngModel)]="medico.cargo_actual"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating >Registro profesional</ion-label>
+    <ion-input [(ngModel)]="medico.registro_profesional"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating >Observacion</ion-label>
+    <ion-input [(ngModel)]="medico.observacion"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label >Especialidad</ion-label>
+    <ion-select [(ngModel)]="medico.especialidad">
+      <ion-option value="CC">Radiologia</ion-option>
+      <ion-option value="CE">Cirugia</ion-option>
+      <ion-option value="CE">Medicina general</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label >Unidad funcional</ion-label>
+    <ion-select [(ngModel)]="medico.unidad_funcional">
+      <ion-option value="CC">Urgencias</ion-option>
+      <ion-option value="CE">Consulta externa</ion-option>
+      <ion-option value="CE">Cirugia</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label  >Porcentaje honorario</ion-label>
+    <ion-input type="number" [(ngModel)]="medico.porcentaje_honorario"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label >Departamento</ion-label>
+    <ion-select [(ngModel)]="medico.Departamento">
+      <ion-option value="CC">Usuario</ion-option>
+      <ion-option value="CE">Prestador</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label  > Municipio</ion-label>
+    <ion-input type="number" [(ngModel)]="medico.municipio"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label >Genero</ion-label>
+    <ion-select [(ngModel)]="medico.genero">
+      <ion-option value="MASCULINO">Masculino</ion-option>
+      <ion-option value="FEMENINO">Femenino</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label floating >Personal Atiende</ion-label>
+    <ion-input [(ngModel)]="medico.personal_atiende"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Mostrar en historias</ion-label>
+    <ion-toggle [(ngModel)]="medico.mostrar_en_historias"></ion-toggle>
+  </ion-item>
+  
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+      <button ion-button block color="primary" class="toolbar" (click)="valido()">Agregar</button>
+    </ion-toolbar>
+  </ion-footer>

@@ -54,10 +54,8 @@ import { ProblemasActualesPage} from '../pages/historia_clinica/nutrición/probl
 import { AnalisisConsultaPage } from '../pages/historia_clinica/nutrición/analisis-consulta/analisis-consulta';
 //REMI
 import { RemisionPage} from '../pages/historia_clinica/remision/remision';
-
-//import { historiaNutricionalPage } from '../pages/historia_clinica/HCnutricional/historia_nutricional/historia_nutricional';
-
-
+//Prestadores
+import {RegistrarPrestadorPage} from '../pages/registrar-prestador/registrar-prestador';
 
 @NgModule({
   declarations: [
@@ -72,6 +70,8 @@ import { RemisionPage} from '../pages/historia_clinica/remision/remision';
     TabsNutricionPage,PopoverPage2,
     //Remision
     RemisionPage,
+    //PRESTADORES
+    RegistrarPrestadorPage,
   ],
   imports: [
     BrowserModule,
@@ -93,6 +93,8 @@ import { RemisionPage} from '../pages/historia_clinica/remision/remision';
     TabsNutricionPage,PopoverPage2,
     //Remision
     RemisionPage,
+    //Prestadores
+    RegistrarPrestadorPage,
   ],
   providers: [
     StatusBar,
